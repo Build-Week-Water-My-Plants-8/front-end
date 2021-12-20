@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 //import { useState } from 'react';
 import Header from './components/Header';
+import Home from './components/Home';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Login from './components/Login';
 import Footer from './components/Footer';
@@ -24,6 +25,8 @@ function App() {
         <ModalDialog open = {open} handleClose = {handleClose}/> */}
       
       <Header />
+      
+      <Home />
       <Router>
         <Routes>
           <Route path='/login' component={Login}/>
