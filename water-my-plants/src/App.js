@@ -1,7 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  }
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +25,10 @@ function App() {
         >
           Learn React
         </a>
+        <Button variant = "contained" color = "primary" onClick = {handleOpen}>
+          Signup
+        </Button>
+        <ModalDialog open = {open} handleClose = {handleClose}/>
       </header>
     </div>
   );
