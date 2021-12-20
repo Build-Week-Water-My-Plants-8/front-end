@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { useState } from 'react';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -24,6 +25,8 @@ function App() {
 
 
       <Header />
+
+      <Footer />
 
     </div>
   );
