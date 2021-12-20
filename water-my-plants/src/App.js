@@ -25,10 +25,11 @@ function App() {
         <ModalDialog open = {open} handleClose = {handleClose}/> */}
       
       <Header />
-      <Home />
       <BrowserRouter>
         <Routes>
+          <Route exact path={'/'} element={<Home />}/>
           <Route path={'/login'} element={<Login />}/>
+          
         </Routes>
         
       </BrowserRouter>
