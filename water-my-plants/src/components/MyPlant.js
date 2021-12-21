@@ -5,11 +5,11 @@ const MyPlant = (props) => {
     // console.log(props)
     const {plant} = props;
 
-    const handleClick = () => {
+    // const handleClick = () => {
 
-    }
+    // }
 
-
+ 
 
     return (
         <div>
