@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axiosWithAuth from '../utils/axiosWithAuth';
 
 
 function Logout() {
-    const { push } = useHistory();
+    const navigate = useNavigate();
 
     useEffect(() => {
         axiosWithAuth().post('/logout')
         .then(res => {
             localStorage.removeItem('token');
-            push('/login');
+            navigate('/login');
         })
         .catch(err => {
             console.error(err);
