@@ -1,13 +1,14 @@
 import React from 'react';
+import { Navbar, NavbarBrand, NavLink } from 'reactstrap';
 
 export default function Header() {
   return(
     <header className='header-container'>
-      <span>Water My Plants</span>
-        {
-          // <a href='#'>Home</a>
-          // <a href='#'>Login</a>
-        }
+      <Navbar color='light'>
+        <NavbarBrand href='/'>Water My Plants</NavbarBrand>
+        <NavLink href='/login'>Login</NavLink>
+        <NavLink href='/profile'>Profile</NavLink>
+      </Navbar>
     </header>
   )
 }
