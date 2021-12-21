@@ -7,7 +7,7 @@ import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import Login from './components/Login';
 import Footer from './components/Footer';
 import MyPlantList from './components/MyPlantList';
-
+import Profile from './components/Profile';
 
 function App() {
   // const [open, setOpen] = useState(false);
@@ -32,7 +32,8 @@ function App() {
           <Route exact path={'/'} element={<Home />}/>
           <Route path={'/login'} element={<Login />}/>
           <Route path={'/plants'} element={<MyPlantList />} />
-          
+          <Route path={'/profile'} element={<Profile />}/>
+
         </Routes>
         
       </BrowserRouter>
