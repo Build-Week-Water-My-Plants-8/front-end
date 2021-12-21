@@ -1,6 +1,6 @@
 import React from "react";
-import { Route, Redirect, useNavigate } from "react-router-dom";
-
+import { Route, Redirect } from "react-router-dom";
+// import { useNavigate } from 'react-router-dom';
 function PrivateRoute({component: Component, ...rest}) {
   //const naviate = useNavigate();
   return (<Route {...rest} render={() => {
