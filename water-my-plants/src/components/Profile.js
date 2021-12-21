@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react'
-
+import React, { useEffect } from 'react';
+import EditProfile from './EditProfile';
 function Profile() {
 
 
 
     return (
         <div>
-            <h1>Profile Test</h1>
+            <EditProfile />
         </div>
     )
 }
