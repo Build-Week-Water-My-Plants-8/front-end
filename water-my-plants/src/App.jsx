@@ -10,21 +10,9 @@ import MyPlantList from './components/MyPlantList';
 import Profile from './components/Profile';
 
 function App() {
-  // const [open, setOpen] = useState(false);
-  // const handleOpen = () => {
-  //   setOpen(true);
-  // };
-  // const handleClose = () => {
-  //   setOpen(false);
-  // }
+  
   return (
     <div className="App">
-
-      
-        {/* <Button variant = "contained" color = "primary" onClick = {handleOpen}>
-          Signup
-        </Button>
-        <ModalDialog open = {open} handleClose = {handleClose}/> */}
       
       <Header />
       <BrowserRouter>
@@ -35,12 +23,11 @@ function App() {
           <Route path={'/profile'} element={<Profile />}/>
 
         </Routes>
-        
       </BrowserRouter>
-      
-      <Footer />
 
+      <Footer/>
     </div>
+    
   );
 }
 

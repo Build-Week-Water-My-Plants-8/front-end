@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from 'reactstrap';
+// import { Navbar, NavbarBrand, NavLink } from 'reactstrap';
 
 export default function Header() {
   return(
@@ -11,6 +12,11 @@ export default function Header() {
           <a href='#'>Sign In</a>
           <Button>Register</Button>
       </div>
+      {/* <Navbar color='light'>
+        <NavbarBrand href='/'>Water My Plants</NavbarBrand>
+        <NavLink href='/login'>Login</NavLink>
+        <NavLink href='/profile'>Profile</NavLink>
+      </Navbar> */}
     </header>
   )
 }
