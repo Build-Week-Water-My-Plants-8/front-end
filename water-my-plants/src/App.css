@@ -28,25 +28,42 @@ header a:hover{
 }
 
 .nav-links Button {
+  margin-right: 5px;
   background-color:#354131;
   border: none;
 }
 
 /* home styles */
 .home-container {
-  background-image: url('');
+  background-image: url('./Assets/homebg.jpg');
+  background-position: 70% 30% 15%;
+  background-size: 120%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 75vh;
-  width: 100vh;
-  margin: 0 auto;
+  height: 85vh;
+  width: 100%;
 }
 
 .home-button Button {
   padding: 1.5%;
-  background-color: #354131;
-  border: none;
+  background-color:#354131;
+  color:#FFF8E1;
+  border: 1px solid #354131;
+}
+
+.home-text, .home-details, .home-button {
+  width: 33%;
+  margin: 0 auto;
+  color: #354131;
+}
+
+.home-button {
+  text-align: center;
+}
+
+.home-text h1{
+  font-size: 6rem;
 }
 
 
@@ -56,8 +73,8 @@ header a:hover{
   flex-direction: column;
   justify-content: center;
   margin:0 auto;
-  margin-top: 8%;
-  margin-bottom: 18%;
+  margin-top: 5%;
+  margin-bottom: 10%;
   width: 33%;
 }
 
@@ -94,6 +111,45 @@ input {
   width: 500px;
   background-color: #354131;
   border:none;
+}
+
+/* plant styles */
+.top-container {
+  display:flex;
+  justify-content: center;
+  padding: 2%;
+  background-color: #FFF8E1;
+  color: #354131;
+}
+
+.plant-label {
+  margin: 5%;
+}
+
+.bottom-container {
+  display:flex;
+  justify-content: center;
+  padding: 3%;
+  color: #354131;
+}
+
+.care-info {
+  margin-right: 10%;
+}
+
+.care-info h2 {
+  text-align: center;
+}
+
+.edit-buttons {
+  display:flex;
+  flex-direction: column;
+  margin-left: 5%;
+}
+
+.edit-buttons Button {
+  margin-bottom: 2rem;
+  background-color: #354131;
 }
 
 /* footer styles */

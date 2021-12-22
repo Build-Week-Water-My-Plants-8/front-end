@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import MyPlantList from './components/MyPlantList';
 import Profile from './components/Profile';
 
+
 function App() {
   
   return (
@@ -24,7 +25,7 @@ function App() {
 
         </Routes>
       </BrowserRouter>
-
+      
       <Footer/>
     </div>
     
