@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const MyPlant = (props) => {
 
     // console.log(props)
@@ -18,6 +19,7 @@ const MyPlant = (props) => {
             <p>Species: {plant.species}</p>
             <p>Water Frequency: {plant.h2oFrequency}</p>
             <button>edit me!</button>
+
         </div>
     )
 }
