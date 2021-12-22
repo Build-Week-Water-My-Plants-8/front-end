@@ -11,6 +11,7 @@ import Profile from './components/Profile';
 // import PrivateRoute from './components/PrivateRoute';
 // import MyPlant from './components/MyPlant';
 
+
 function App() {
   
   return (
@@ -37,7 +38,7 @@ function App() {
           /> */}
         </Routes>
       </BrowserRouter>
-
+      
       <Footer/>
     </div>
     
