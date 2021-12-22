@@ -1,25 +1,52 @@
-import React from "react";
+import React, {useState} from "react";
 
-const EditPlantForm = () => {
+const EditPlantForm = (props) => {
+
+    const {plant, handleUpdatePlant, formToggle, setFormToggle} = props;
+    const [formValues, setFormValues] = useState(plant);
+
+    const onChange = (event) => {
+        setFormValues({
+            ...formValues,
+            [event.target.name] : event.target.value
+        })
+    }
+
+    const handleSubmit=(event) => {
+        event.preventDefault();
+        handleUpdatePlant(formValues)
+    }
+
     return (
         <div>
             <h1>Edit my plant</h1>
-            <form>
-                <lable>Nickname: &nbsp;</lable>
+            <form onSubmit={handleSubmit}>
+                <label>Nickname: &nbsp;</label>
                 <input 
                 type='text'
+                name='nickname'
+                value={formValues.nickname}
+                onChange={onChange}
                 />
 
-                <lable>Species: &nbsp;</lable>
+                <label>Species: &nbsp;</label>
                 <input 
                 type='text'
+                name='species'
+                value={formValues.species}
+                onChange={onChange}
                 />
 
-                <lable>Water Frequency: &nbsp;</lable>
+                <label>Water Frequency: &nbsp;</label>
                 <input 
                 type='text'
+                name='water'
+                value={formValues.h2oFrequency}
+                onChange={onChange}
                 />
+                <button>submit</button>
             </form>
+            <button onClick={()=> {setFormToggle(!formToggle)}}>cancel</button>
         </div>
     )
 }

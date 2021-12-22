@@ -1,8 +1,8 @@
-// import React, {useEffect} from "react";
-import React from "react";
-// import axiosWithAuth from '../utils/axiosWithAuth';
+
+import React, {useState, useEffect} from "react";
+import axiosWithAuth from '../utils/axiosWithAuth';
 import MyPlant from "./MyPlant";
-import EditPlantForm from "./EditPlantForm";
+
 
 //dummy data
 const plants = [{
@@ -29,10 +29,13 @@ const plants = [{
 
 const MyPlantList = () => {
 
+    const [plantList, setPlantList] = useState(plants);
 
+    // GET API call
     // console.log(plants);
     // useEffect(() =>{
     //     axiosWithAuth()
+    //      .get('/endpoint)
     //     .then(resp => {
     //         console.log(resp);
     //     })
@@ -41,14 +44,44 @@ const MyPlantList = () => {
     //     })
     // })
 
+    //  DELETE DATA
+    const handleDelete = () => {
+        console.log('i am a delete')
+        axiosWithAuth()
+        .delete('/endpoint/${id}') //trey says don't forget the backticks ` or it will break
+            .then(resp => {
+                console.log(resp)
+                setPlantList(resp.data)
+            })
+            .catch(err => {
+                console.error(err)
+            })
+    }
+
+
+    const handleUpdatePlant = (newPlant) => {
+        
+        console.log('click')
+        axiosWithAuth()
+        .put('/endpoint', newPlant)
+            .then(resp => {
+                console.log(resp)
+                
+            })
+            .catch(err => {
+                console.error(err)
+            })
+    }
+
 
     return(
         <div className="plantList-container">
-            <EditPlantForm />
+            
             <h1>My Plants!</h1>
             {  
-                plants.map((plant, i) => {
-                    return <MyPlant plant={plant} key={i} />
+                plantList.map((plant, i) => {
+                    return <MyPlant plant={plant} key={i} handleDelete={handleDelete} handleUpdatePlant={handleUpdatePlant} />
+                    
                 })
             }
             
