@@ -14,7 +14,7 @@ export default function Header() {
       <div className='nav-links'>
           { !token && <a href='/login'>Sign In</a> }
           
-          { !token && <Button href='/register'>Register</Button> }
+          { !token && <Button href='/signup'>Register</Button> }
           { token && <Button href='/plants'>My Plants</Button> }
           { token && <Button href='/profile'>Account</Button> } 
           { token && <Button href='/logout'>Sign Out</Button> }

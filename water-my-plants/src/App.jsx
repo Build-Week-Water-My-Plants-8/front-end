@@ -8,6 +8,7 @@ import Login from './components/Login';
 import Footer from './components/Footer';
 import MyPlantList from './components/MyPlantList';
 import Profile from './components/Profile';
+import SignUp from './components/SignUp';
 // import PrivateRoute from './components/PrivateRoute';
 // import MyPlant from './components/MyPlant';
 
@@ -27,6 +28,7 @@ function App() {
           <Route path={'/plants'} element={<MyPlantList />} /> 
 
           <Route path={'/profile'} element={<Profile />}/>
+          <Route path={'/signup'} element={<SignUp />} />
 
           {/* uncomment this when Kayla is done with the conditional rendering on the navbar links -Lia */}
           {/* <Route path={'/plants'} 
