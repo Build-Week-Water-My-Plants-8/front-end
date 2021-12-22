@@ -38,7 +38,6 @@ function App() {
         
       </BrowserRouter>
       
-      {/* <Login/> */}
       <Footer />
 
     </div>

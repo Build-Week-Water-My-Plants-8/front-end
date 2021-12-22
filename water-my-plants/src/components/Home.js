@@ -4,13 +4,17 @@ import { Button } from 'reactstrap';
 export default function Home() {
   return (
     <div className='home-container'>
-      <div className='about-container'>
+      <div className='home-text'>
         <h1>Plants need love too.</h1>
+      </div>
+
+      <div className='home-details'>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam quis enim lobortis scelerisque fermentum dui faucibus. Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Id nibh tortor id aliquet.
         </p>
       </div>
-      <div className='features-container'>
+
+      <div className='home-button'>
         <Button>Register Now</Button>
       </div>
     </div>

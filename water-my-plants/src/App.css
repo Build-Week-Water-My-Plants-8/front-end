@@ -1,6 +1,6 @@
-* {
-  /* border: 1px solid red; */
-}
+/* * {
+  border: 1px solid red;
+} */
 
 /* nav bar styles */
 header {
@@ -32,15 +32,21 @@ header a:hover{
   border: none;
 }
 
-
-/* footer styles */
-footer {
-  border-top: 1px solid black;
-  margin: 5% 5% 0 5%;
+/* home styles */
+.home-container {
+  background-image: url('');
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 75vh;
+  width: 100vh;
+  margin: 0 auto;
 }
 
-footer p {
-  margin-top: 1%;
+.home-button Button {
+  padding: 1.5%;
+  background-color: #354131;
+  border: none;
 }
 
 
@@ -90,5 +96,14 @@ input {
   border:none;
 }
 
+/* footer styles */
+footer {
+  border-top: 1px solid black;
+  margin: 5% 5% 0 5%;
+}
+
+footer p {
+  margin-top: 1%;
+}
 
 
