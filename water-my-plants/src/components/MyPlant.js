@@ -1,15 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
+// import axiosWithAuth from '../utils/axiosWithAuth';
+import EditPlantForm from "./EditPlantForm";
 
 
 const MyPlant = (props) => {
 
     // console.log(props)
-    const {plant} = props;
+    const {plant, handleDelete, handleUpdatePlant} = props;
 
-    // const handleClick = () => {
-
-    // }
-
+    const [formToggle, setFormToggle] = useState(false);
+    
  
 
     return (
@@ -18,8 +18,10 @@ const MyPlant = (props) => {
             <h1>{plant.nickname}</h1>
             <p>Species: {plant.species}</p>
             <p>Water Frequency: {plant.h2oFrequency}</p>
-            <button>edit me!</button>
-
+            <button onClick={()=> {setFormToggle(!formToggle)}}>edit me!</button>
+            <button onClick={handleDelete}>delete</button>
+            { formToggle && 
+                <EditPlantForm plant={plant} handleUpdatePlant={handleUpdatePlant} formToggle={formToggle} setFormToggle={setFormToggle}/>}
         </div>
     )
 }
