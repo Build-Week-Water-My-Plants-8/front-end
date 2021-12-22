@@ -3,17 +3,23 @@ import { Button } from 'reactstrap';
 
 
 export default function Header() {
+
+  const token = localStorage.getItem('token');
+
   return(
     <header className='header-container'>
       <div className='watermyplants'>
-        <a href='#'>Water My Plants</a>
+        <a href='/'>Water My Plants</a>
       </div>
       <div className='nav-links'>
-          <a href='#'>Sign In</a>
-          <Button>Register</Button>
-          {/* <Button>My Plants</Button>
-          <Button>Account</Button>
-          <Button>Sign Out</Button> */}
+          { !token && <a href='/login'>Sign In</a> }
+          
+          { !token && <Button href='/register'>Register</Button> }
+          { token && <Button href='/plants'>My Plants</Button> }
+          { token && <Button href='/profile'>Account</Button> } 
+          { token && <Button href='/logout'>Sign Out</Button> }
+
+          {/* may change path name for logout & register depends on jayson's preferences on naming -lia */}
       </div>
     </header>
   )
