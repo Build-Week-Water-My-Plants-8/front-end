@@ -7,7 +7,7 @@ function PrivateRoute({component: Component, ...rest}) {
   if(localStorage.getItem('token')){
     return (<Component/>)
   } else {
-    return navigate('/home');
+    return navigate('/');
   }
   }
   }/>);

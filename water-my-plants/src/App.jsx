@@ -23,7 +23,7 @@ function App() {
         <Routes>
           <Route exact path={'/'} element={<Home />}/>
           <Route path={'/login'} element={<Login />}/>
-
+          <Route path={'/signup'} element={<SignUp/>}/>
           {/* delete route path to MyPlantList when private route is inserted -Lia */}
           <Route path={'/plants'} element={<MyPlantList />} /> 
 
