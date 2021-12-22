@@ -159,11 +159,17 @@ input {
 /* footer styles */
 footer {
   border-top: 1px solid black;
-  margin: 5% 5% 0 5%;
+  display: flex;
+  justify-content: space-around;
+  background-color: #64755F;
+  height: 4rem;
+  padding: 1% 4% 0 4%;
+  position: fixed;
+  width: 100%;
 }
 
-footer p {
-  margin-top: 1%;
+footer a {
+  margin-right: 2rem;
+  text-decoration: none;
+  color: #FFF8E1;
 }
-
-
