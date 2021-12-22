@@ -9,9 +9,10 @@ import Footer from './components/Footer';
 import MyPlantList from './components/MyPlantList';
 import Profile from './components/Profile';
 import SignUp from './components/SignUp';
+import PrivateRoute from './components/PrivateRoute';
 // import PrivateRoute from './components/PrivateRoute';
 // import MyPlant from './components/MyPlant';
-
+import Logout from './components/Logout';
 
 function App() {
   
@@ -23,10 +24,10 @@ function App() {
         <Routes>
           <Route exact path={'/'} element={<Home />}/>
           <Route path={'/login'} element={<Login />}/>
-
+          <Route path={'/signup'} element={<SignUp/>}/>
           {/* delete route path to MyPlantList when private route is inserted -Lia */}
           <Route path={'/plants'} element={<MyPlantList />} /> 
-
+          <Route path={'/logout'} element={<Logout />} />
           <Route path={'/profile'} element={<Profile />}/>
           <Route path={'/signup'} element={<SignUp />} />
 

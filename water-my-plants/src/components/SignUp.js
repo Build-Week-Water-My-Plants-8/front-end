@@ -1,11 +1,46 @@
-import React from 'react'
+import React, { useState } from 'react'
 // import './App.css';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
-
-
+import axiosWithAuth from '../utils/axiosWithAuth';
+import axios from 'axios';
+const initialFormValues = {
+    username: "",
+    password: "",
+    phone_number: ""
+}
 export default function SignUp() {
+
+    const [formValues, setFormValues] = useState(initialFormValues)
+
+
+    const signup = () => {
+        axiosWithAuth().post('/users/register', {
+            "username": formValues.username,
+            "password": formValues.password,
+            "phone_number": formValues.phone_number
+        })
+        .then(res => {
+            console.log(res);
+        })
+        .catch(err => {
+            console.log({err});
+        })
+    }
+    const onChange = (e) => {
+        setFormValues({
+            ...formValues,
+            [e.target.name]: e.target.value
+        })
+    }
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+        console.log(formValues);
+        signup();
+    }
+
     return (
-        <form className='form-container signup-form'>
+        <form className='form-container signup-form' onSubmit={onSubmit}>
 
             <div className='form-title'>
                 <h1>Sign Up</h1>
@@ -34,12 +69,12 @@ export default function SignUp() {
             </div>
 
             <div className='username-input form-spacing'>
-                <label>Username/Email
+                <label>Username
                     <input
                     name='username'
                     type='text'
-                    // value= 'placeholder'
-                    // onChange= 'placeholder'
+                    value={formValues.username}
+                    onChange={onChange}
                     />
                 </label>
             </div>
@@ -47,10 +82,10 @@ export default function SignUp() {
             <div className='email-input form-spacing'>
                 <label>Phone Number
                     <input
-                    name='phone'
+                    name='phone_number'
                     type='text'
-                    // value= 'placeholder'
-                    // onChange= 'placeholder'
+                    value={formValues.phone_number}
+                    onChange={onChange}
                     />
                 </label>
             </div>
@@ -60,8 +95,8 @@ export default function SignUp() {
                     <input
                     name='password'
                     type='password'
-                    // value= 'placeholder'
-                    // onChange= 'placeholder'
+                    value={formValues.password}
+                    onChange={onChange}
                     />
             </div>
 
