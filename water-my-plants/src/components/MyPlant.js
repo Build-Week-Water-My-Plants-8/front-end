@@ -1,17 +1,13 @@
 import React, {useState} from "react";
-// import axiosWithAuth from '../utils/axiosWithAuth';
 import EditPlantForm from "./EditPlantForm";
 
 
 const MyPlant = (props) => {
 
-    // console.log(props)
     const {plant, handleDelete, handleUpdatePlant} = props;
 
     const [formToggle, setFormToggle] = useState(false);
     
- 
-
     return (
         <div>
             <img src={plant.image} alt='plant' width='25%' />
