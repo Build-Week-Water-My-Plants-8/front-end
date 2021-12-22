@@ -2,6 +2,7 @@
 import React from "react";
 // import axiosWithAuth from '../utils/axiosWithAuth';
 import MyPlant from "./MyPlant";
+import EditPlantForm from "./EditPlantForm";
 
 //dummy data
 const plants = [{
@@ -43,12 +44,14 @@ const MyPlantList = () => {
 
     return(
         <div className="plantList-container">
+            <EditPlantForm />
             <h1>My Plants!</h1>
             {  
                 plants.map((plant, i) => {
                     return <MyPlant plant={plant} key={i} />
                 })
             }
+            
         </div>
     )
 }
