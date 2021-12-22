@@ -74,7 +74,7 @@ Github: [https://github.com/Jaredhall18](https://github.com/Jaredhall18)
 
 Unit 4
 
-![Jyson](/images/jyson.png)
+![Jayson](/images/jayson.png)
 
 Jayson Byrd
 
