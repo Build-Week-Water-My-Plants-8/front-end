@@ -5,22 +5,11 @@ import axiosWithAuth from '../utils/axiosWithAuth';
 
 function Logout() {
     const navigate = useNavigate();
-
-
-
     localStorage.removeItem('token');
-    navigate('/');
-    // useEffect(() => {
-    //     axiosWithAuth().post('/logout')
-    //     .then(res => {
-    //         localStorage.removeItem('token');
-    //         navigate('/login');
-    //     })
-    //     .catch(err => {
-    //         console.error(err);
-    //     })
-    // }, [])
-
+    useEffect(()=> {
+     navigate('/');   
+    }, [])
+    
     return (<div></div>)
 }
 

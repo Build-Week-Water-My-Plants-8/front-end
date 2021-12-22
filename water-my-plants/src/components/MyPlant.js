@@ -22,7 +22,8 @@ const MyPlant = (props) => {
             { formToggle && 
                 <EditPlantForm plant={plant} handleUpdatePlant={handleUpdatePlant} formToggle={formToggle} setFormToggle={setFormToggle}/>}
         </div>
-        </div>
+        
+        
     )
 }
 
