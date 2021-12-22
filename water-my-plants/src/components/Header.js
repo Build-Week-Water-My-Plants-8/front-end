@@ -14,10 +14,10 @@ export default function Header() {
       <div className='nav-links'>
           { !token && <a href='/login'>Sign In</a> }
           
-          { !token && <Button href='/signup'>Register</Button> }
-          { token && <Button href='/plants'>My Plants</Button> }
-          { token && <Button href='/profile'>Account</Button> } 
-          { token && <Button href='/logout'>Sign Out</Button> }
+          { !token && <Button id='register-btn' href='/signup'>Register</Button> }
+          { token && <Button id='myplants-btn' href='/plants'>My Plants</Button> }
+          { token && <Button id='profile-btn' href='/profile'>Account</Button> } 
+          { token && <Button id='logout-btn' href='/logout'>Sign Out</Button> }
 
           {/* may change path name for logout & register depends on jayson's preferences on naming -lia */}
       </div>
