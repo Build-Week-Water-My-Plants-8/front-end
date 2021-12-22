@@ -1,5 +1,5 @@
 
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import axiosWithAuth from '../utils/axiosWithAuth';
 import MyPlant from "./MyPlant";
 
@@ -45,10 +45,10 @@ const MyPlantList = () => {
     // })
 
     //  DELETE DATA
-    const handleDelete = () => {
+    const handleDelete = (id) => {
         console.log('i am a delete')
         axiosWithAuth()
-        .delete('/endpoint/${id}') //trey says don't forget the backticks ` or it will break
+        .delete(`/endpoint/${id}`) //don't forget the backticks ` or it will break
             .then(resp => {
                 console.log(resp)
                 setPlantList(resp.data)
@@ -60,8 +60,6 @@ const MyPlantList = () => {
 
 
     const handleUpdatePlant = (newPlant) => {
-        
-        console.log('click')
         axiosWithAuth()
         .put('/endpoint', newPlant)
             .then(resp => {
