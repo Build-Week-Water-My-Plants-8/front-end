@@ -1,70 +1,135 @@
-# Getting Started with Create React App
+# Water My Plants: Bloom Tech Build Week December 2021
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The purpose of Build Week is to empower students to demonstrate mastery of your learning objectives. The Build Weeks experience helps prepare students for the job market.
 
-## Available Scripts
+## ☝️ **Pitch**
 
-In the project directory, you can run:
+Ensuring that all your plants are consistently watered is actually pretty difficult. Water My Plants is an app that helps to solve those problems. 
 
-### `npm start`
+With an easy to use interface for creating a plant watering schedule tailored to each individual plant, **Water My Plants** will remind users when it's time to feed that foliage and quench your plants' thirst.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ✅  **MVP**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. `user` can sign-up / create an account by providing a unique `username`, a valid mobile `phoneNumber` and a `password`. 
+2. `user` can login to an authenticated session using the credentials provided at account creation / signup.
+3. Authenticated `user` can Create, Update and Delete a `plant` object. At a minimum, each `plant` must have the following properties: 
+    - `id`: Integer
+    - `nickname`: String
+    - `species` : String
+    - `h2oFrequency`: Type determined by implementation
+    - `image`: (optional)
+4. Authenticated `user` can view a list of created `plants`.  A `plant` can be deleted or selected to present `user` with a detail view where `user` can then update any property of the selected `plant`. 
+5. Authenticated `user` can update their `phoneNumber` and `password`.
+6. Authenticated `user` can update their `phoneNumber` and `password`.
 
-### `npm test`
+### Vercel (frontend)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Deployed Url: [https://water-my-plants-9-build-week.vercel.app](https://water-my-plants-9-build-week.vercel.app/)
 
-### `npm run build`
+## Steps to clone this project:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone this repository.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```jsx
+git clone git@github.com:Build-Week-Water-My-Plants-8/front-end.git
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. To install all the dependencies; React, Reactstrap, React-Router-DOM, Bootstrap, React-DOM, and React-Router.
 
-### `npm run eject`
+```jsx
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Run the server for the backend:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```jsx
+npm run server
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Start the application. It will open [http://localhost:3000](http://localhost:3000) in your browser
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```jsx
+npm start
+```
 
-## Learn More
+# Meet the team!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![Arias](/images/arias.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Arison Arias
 
-### Code Splitting
+Backend Engineer
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Github: [https://github.com/Arison13](https://github.com/Arison13)
 
-### Analyzing the Bundle Size
+Unit 4
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![Jared](/images/jared.png)
 
-### Making a Progressive Web App
+Jared Hall
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Backend Engineer
 
-### Advanced Configuration
+Github: [https://github.com/Jaredhall18](https://github.com/Jaredhall18)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Unit 4
 
-### Deployment
+![Jayson](/images/jayson.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Jayson Byrd
 
-### `npm run build` fails to minify
+Frontend React Engineer
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Github: [https://github.com/ByrdJayson](https://github.com/ByrdJayson)
+
+Unit 3
+
+![Lia](/images/me.png)
+
+Lia Moua
+
+Frontend React Engineer 
+
+Github: [https://github.com/moua0061](https://github.com/moua0061)
+
+Unit 3
+
+![Ryan](/images/ryan.png)
+
+Ryan Howard
+
+Frontend React Engineer
+
+Github: [https://github.com/ryansnorek](https://github.com/ryansnorek)
+
+Unit 3
+
+![Kayla](/images/kayla.png)
+
+Kayla Famurewa
+
+Frontend React Engineer
+
+Github: [https://github.com/kfam22](https://github.com/kfam22)
+
+Unit 2
+
+![Brandon](/images/brandon.png)
+
+Brandon Booth
+
+Frontend React Engineer 
+
+Github: [https://github.com/brandon-bee](https://github.com/brandon-bee)
+
+Unit 2
+
+![Gage](/images/gage.png)
+
+Gage Milligan
+
+Frontend React Engineer
+
+Github:[https://github.com/](https://github.com/brandon-bee)[gagemilligan](https://github.com/Build-Week-Water-My-Plants-8/front-end/issues?q=is%3Apr+author%3Agagemilligan)
+
+Unit 2

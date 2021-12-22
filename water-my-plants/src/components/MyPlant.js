@@ -1,17 +1,16 @@
+
 import React from "react";
 import { Button} from 'reactstrap';
+import React, {useState} from "react";
+import EditPlantForm from "./EditPlantForm";
+
 
 const MyPlant = (props) => {
 
-    // console.log(props)
-    const {plant} = props;
+    const {plant, handleDelete, handleUpdatePlant} = props;
 
-    // const handleClick = () => {
-
-    // }
-
- 
-
+    const [formToggle, setFormToggle] = useState(false);
+    
     return (
         <div className='plant-container'>
             <div className='top-container'>
@@ -34,6 +33,15 @@ const MyPlant = (props) => {
                     <Button>Remove</Button>
                 </div>
             </div>
+        <div>
+            <img src={plant.image} alt='plant' width='25%' />
+            <h1>{plant.nickname}</h1>
+            <p>Species: {plant.species}</p>
+            <p>Water Frequency: {plant.h2oFrequency}</p>
+            <button onClick={()=> {setFormToggle(!formToggle)}}>edit me!</button>
+            <button onClick={handleDelete}>delete</button>
+            { formToggle && 
+                <EditPlantForm plant={plant} handleUpdatePlant={handleUpdatePlant} formToggle={formToggle} setFormToggle={setFormToggle}/>}
         </div>
     )
 }
