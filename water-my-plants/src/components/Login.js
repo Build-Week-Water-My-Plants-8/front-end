@@ -1,11 +1,40 @@
-import React from 'react'
+import React,{ useState } from 'react'
+
 // import './App.css';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import axiosWithAuth from '../utils/axiosWithAuth';
 
+const initialFormValues = {
+    username: '',
+    password: '',
+    phone_number: ''
+}
 
 export default function Login() {
+    const [formValues, setFormValues] = useState(initialFormValues);
+    const token = localStorage.getItem('token');
+
+    const login = (credentials) => {
+        axiosWithAuth().post('/users/login', credentials)
+        .then(res => {
+            console.log(res);
+        })
+    }
+
+    const onChange = (e) => {
+        setFormValues({
+            ...formValues,
+            [e.target.name]: e.target.value
+        })
+        console.log(e.target.name,e.target.value)
+    }
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+        login(formValues);
+    }
     return (
-        <form className='form-container login-form'>
+        <form className='form-container login-form' onSubmit={onSubmit}>
 
             <div className='form-title'>
                 <h1>Login</h1>
@@ -16,8 +45,8 @@ export default function Login() {
                     <input
                     name='username'
                     type='text'
-                    // value= 'placeholder'
-                    // onChange= 'placeholder'
+                    value={formValues.username}
+                    onChange={onChange}
                     />
                 </label>
             </div>
@@ -28,8 +57,8 @@ export default function Login() {
                     name='password'
                     type='password'
                     // style={{ width:'500px'}}
-                    // value= 'placeholder'
-                    // onChange= 'placeholder'
+                    value={formValues.password}
+                    onChange={onChange}
                     />
             </div>
 

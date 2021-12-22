@@ -1,5 +1,4 @@
 
-import React from "react";
 import { Button} from 'reactstrap';
 import React, {useState} from "react";
 import EditPlantForm from "./EditPlantForm";
@@ -42,6 +41,7 @@ const MyPlant = (props) => {
             <button onClick={handleDelete}>delete</button>
             { formToggle && 
                 <EditPlantForm plant={plant} handleUpdatePlant={handleUpdatePlant} formToggle={formToggle} setFormToggle={setFormToggle}/>}
+        </div>
         </div>
     )
 }
