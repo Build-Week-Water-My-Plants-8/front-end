@@ -1,4 +1,3 @@
-import { Button} from 'reactstrap';
 import React, {useState} from "react";
 import EditPlantForm from "./EditPlantForm";
 
@@ -9,6 +8,8 @@ const MyPlant = (props) => {
 
     const [formToggle, setFormToggle] = useState(false);
     
+ 
+
     return (
         <div>
             <img src={plant.image} alt='plant' width='25%' />
@@ -24,5 +25,7 @@ const MyPlant = (props) => {
 }
 
 export default MyPlant;
+
+
 
 
