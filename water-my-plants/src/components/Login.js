@@ -1,23 +1,28 @@
 import React,{ useState } from 'react'
-
+import axios from 'axios'
 // import './App.css';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
-import axiosWithAuth from '../utils/axiosWithAuth';
-
+import { useNavigate } from 'react-router-dom';
 const initialFormValues = {
-    username: '',
-    password: '',
-    phone_number: ''
+    username: "",
+    password: "",
+    phone_number: ""
 }
 
 export default function Login() {
     const [formValues, setFormValues] = useState(initialFormValues);
-    const token = localStorage.getItem('token');
+    let navigate = useNavigate();
 
-    const login = (credentials) => {
-        axiosWithAuth().post('/users/login', credentials)
+    const login = () => {
+        axios.post('https://water-my-plants-8.herokuapp.com/api/users/login', {
+            "username": formValues.username,
+            "password": formValues.password,
+            "phone_number": formValues.phone_number 
+        })
         .then(res => {
-            console.log(res);
+            localStorage.setItem('username', formValues.username)
+            localStorage.setItem('token', res.data.token);
+            navigate('/plants');
         })
     }
 

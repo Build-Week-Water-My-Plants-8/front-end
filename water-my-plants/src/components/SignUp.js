@@ -2,21 +2,28 @@ import React, { useState } from 'react'
 // import './App.css';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import axiosWithAuth from '../utils/axiosWithAuth';
-
+import axios from 'axios';
 const initialFormValues = {
-    username: '',
-    password: '',
-    phone_number: ''
+    username: "",
+    password: "",
+    phone_number: ""
 }
 export default function SignUp() {
 
     const [formValues, setFormValues] = useState(initialFormValues)
 
 
-    const signup = (credentials) => {
-        axiosWithAuth().post('/users/register', credentials)
+    const signup = () => {
+        axiosWithAuth().post('/users/register', {
+            "username": formValues.username,
+            "password": formValues.password,
+            "phone_number": formValues.phone_number
+        })
         .then(res => {
             console.log(res);
+        })
+        .catch(err => {
+            console.log({err});
         })
     }
     const onChange = (e) => {
@@ -28,7 +35,8 @@ export default function SignUp() {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        signup(formValues);
+        console.log(formValues);
+        signup();
     }
 
     return (
@@ -61,7 +69,7 @@ export default function SignUp() {
             </div>
 
             <div className='username-input form-spacing'>
-                <label>Username/Email
+                <label>Username
                     <input
                     name='username'
                     type='text'
