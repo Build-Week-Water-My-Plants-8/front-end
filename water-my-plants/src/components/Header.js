@@ -1,13 +1,16 @@
 import React from 'react';
+import { Button } from 'reactstrap';
 
 export default function Header() {
   return(
     <header className='header-container'>
-      <span>Water My Plants</span>
-        {
-          // <a href='#'>Home</a>
-          // <a href='#'>Login</a>
-        }
+      <div className='watermyplants'>
+        <a href='#'>Water My Plants</a>
+      </div>
+      <div className='nav-links'>
+          <a href='#'>Sign In</a>
+          <Button>Register</Button>
+      </div>
     </header>
   )
 }
