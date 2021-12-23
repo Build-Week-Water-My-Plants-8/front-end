@@ -6,7 +6,7 @@ export default function Header({isLoggedIn, setIsLoggedIn, token}) {
     console.log(isLoggedIn)
     useEffect(() => {
       token !== null ? setIsLoggedIn(true) : setIsLoggedIn(false)
-  },[setIsLoggedIn, token])
+    },[setIsLoggedIn, token])
 
   return(
     <header className='header-container'>
