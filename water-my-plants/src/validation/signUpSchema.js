@@ -16,7 +16,7 @@ const signUpSchema = yup.object().shape({
     .matches(phoneRegExp, 'Phone number is not valid'),
   confirm: yup
     .string()
-    .oneOf([yup.ref('password'), null], 'Passwords must match')
+    .required('Confirm password is required')
 })
 
 export default signUpSchema;

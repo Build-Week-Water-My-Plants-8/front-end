@@ -137,8 +137,8 @@ export default function SignUp() {
                     <input
                     name='confirm'
                     type='password'
-                    // value= 'placeholder'
-                    // onChange= 'placeholder'
+                    value={formValues.confirm}
+                    onChange={onChange}
                     />
             </div>
 
