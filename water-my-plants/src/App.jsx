@@ -29,7 +29,6 @@ function App() {
           <Route path={'/plants'} element={<MyPlantList />} /> 
           <Route path={'/logout'} element={<Logout />} />
           <Route path={'/profile'} element={<Profile />}/>
-          <Route path={'/signup'} element={<SignUp />} />
 
           {/* uncomment this when Kayla is done with the conditional rendering on the navbar links -Lia */}
           {/* <Route path={'/plants'} 
