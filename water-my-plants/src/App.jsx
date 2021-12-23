@@ -33,24 +33,20 @@ function App() {
           <Route exact path={'/'} element={<Home />}/>
           <Route path={'/login'} element={<Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>} />
           <Route path={'/signup'} element={<SignUp />} />
-          {/* delete route path to MyPlantList when private route is inserted -Lia */}
+
           <Route path={'/plants'} element={
             <PrivateRoute>
               <MyPlantList/>
             </PrivateRoute>
           } />  
           <Route path={'/logout'} element={<Logout />} />
-          <Route path={'/add'} element={<AddPlantForm />} />
-          <Route path={'/about'} element={<About />} />
-
-          {/* uncomment this when Kayla is done with the conditional rendering on the navbar links -Lia */}
-          {/* <Route path={'/plants'} 
-            element={
+          <Route path={'/add'} element={
             <PrivateRoute>
-              <MyPlantList/>
+              <AddPlantForm />
             </PrivateRoute>
-            }
-          /> */}
+          } />
+
+          <Route path={'/about'} element={<About />} />
         </Routes>
       </BrowserRouter>
       
