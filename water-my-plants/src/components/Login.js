@@ -10,9 +10,10 @@ const initialFormValues = {
     phone_number: ""
 }
 
-export default function Login() {
+export default function Login(props) {
     const [formValues, setFormValues] = useState(initialFormValues);
     let navigate = useNavigate();
+    const {setIsLoggedIn} = props
 
     const login = () => {
         axios.post('https://water-my-plants-8.herokuapp.com/api/users/login', {
@@ -23,6 +24,7 @@ export default function Login() {
         .then(res => {
             localStorage.setItem('username', formValues.username)
             localStorage.setItem('token', res.data.token);
+            setIsLoggedIn(true)
             navigate('/plants');
 
             axiosWithAuth().get('/users')

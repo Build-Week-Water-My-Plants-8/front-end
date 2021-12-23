@@ -22,7 +22,7 @@ const MyPlant = (props) => {
             <div className='bottom-container'>
                 <div className='care-label'>
                     <h2>Care</h2>
-                    <p>Water Frequency: {plant.h2ofrequency}</p>   
+                    <p>Water Frequency: {plant.h2frequency}</p>   
                     <p>Optimal Sunlight: Direct Sunlight</p> 
                     <p>Optimal Temperature: 65-75°</p> 
                 </div>
