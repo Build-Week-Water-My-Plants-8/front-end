@@ -64,7 +64,7 @@ Github: [https://github.com/Arison13](https://github.com/Arison13)
 
 Unit 4
 
-![Jared](/images/jared.png)
+![Jared](/src/Assets/team/images/jared.png)
 
 Jared Hall
 
