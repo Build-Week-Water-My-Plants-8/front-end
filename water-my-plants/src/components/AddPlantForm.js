@@ -8,13 +8,13 @@ const initialValues = {
     species: '',
     h20_freq: '',
     plant_image: '',
-    user_id: 1
+    user_id: localStorage.id
 }
 
 const AddPlantForm = () => {
 
     const [values, setValues] = useState(initialValues);
-    const { navigate } = useNavigate();
+    const navigate  = useNavigate();
 
 
     const handleChange = (event) => {
@@ -23,16 +23,10 @@ const AddPlantForm = () => {
         })
     }
 
-    // const x = localStorage.id
-
-    // console.log(JSON.stringify(x))
-    // console.log(x.toString())
-
     const handleAdd = (event) => {
         event.preventDefault()
         axiosWithAuth()
-            // .post('/plants/add', JSON.stringify(x), values)
-            .post('/plants/add', localStorage.id, values)
+            .post('/plants/add', values)
                 .then(resp => {
                     console.log(resp);
                     navigate('/plants')

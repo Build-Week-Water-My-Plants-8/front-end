@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 //import { useState } from 'react';
 import Header from './components/Header';
@@ -17,16 +17,21 @@ import About from './components/About';
 import Logout from './components/Logout';
 import AddPlantForm from './components/AddPlantForm';
 
+
+
 function App() {
+
+  const token = localStorage.getItem('token');
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   
   return (
     <div className="App">
       
-      <Header />
+      <Header token={token} isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
       <BrowserRouter>
         <Routes>
           <Route exact path={'/'} element={<Home />}/>
-          <Route path={'/login'} element={<Login />}/>
+          <Route path={'/login'} element={<Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>} />
           <Route path={'/signup'} element={<SignUp />} />
           {/* delete route path to MyPlantList when private route is inserted -Lia */}
           <Route path={'/plants'} element={<MyPlantList />} /> 
