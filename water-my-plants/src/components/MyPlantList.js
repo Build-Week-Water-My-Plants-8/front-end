@@ -1,7 +1,7 @@
 
 import React, {useState} from "react";
 import axiosWithAuth from '../utils/axiosWithAuth';
-import MyPlant from "./MyPlant";
+import PlantItem from "./PlantItem";
 
 
 //dummy data
@@ -75,14 +75,23 @@ const MyPlantList = () => {
     return(
         <div className="plantList-container">
             
-            <h1>My Plants!</h1>
-            {  
-                plantList.map((plant, i) => {
-                    return <MyPlant plant={plant} key={i} handleDelete={handleDelete} handleUpdatePlant={handleUpdatePlant} />
-                    
-                })
-            }
-            
+            <h1 id='my-plants'>My Plants</h1>
+            <div className='list-container'>
+                {  
+                    plantList.map((plant, i) => {
+                        return <PlantItem plant={plant} key={i} handleDelete={handleDelete} handleUpdatePlant={handleUpdatePlant} />
+                        
+                    })
+                }
+
+                <div id='add-plant-item'>
+                    <a>
+                    <h2>+</h2>
+                    <p>Add Plant</p>
+                    </a>
+                </div>
+
+            </div>
         </div>
     )
 }
