@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import EditPlantForm from "./EditPlantForm";
 
 
@@ -6,9 +6,7 @@ const MyPlant = (props) => {
 
     const { plant, handleDelete, handleUpdatePlant, id, navigate } = props;
 
-    const [formToggle, setFormToggle] = useState(false);
-    
- 
+    const [ formToggle, setFormToggle ] = useState(false);
 
     return (
         <div className='plant-item-container'>
@@ -27,7 +25,7 @@ const MyPlant = (props) => {
             </div>
 
                 <button onClick={()=> {setFormToggle(!formToggle)}}>edit me!</button>
-                <button onClick={()=> handleDelete(plant.plant_id)}>delete</button>
+                <button onClick={()=> handleDelete(plant.plant_id)}>delete me</button>
                 { formToggle && 
                     <EditPlantForm plant={plant} handleUpdatePlant={handleUpdatePlant} formToggle={formToggle} setFormToggle={setFormToggle} id={id} navigate={navigate} />}
             </div>

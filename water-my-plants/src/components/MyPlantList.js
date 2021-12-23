@@ -1,22 +1,19 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import axiosWithAuth from '../utils/axiosWithAuth';
 import MyPlant from "./MyPlant";
 
 const MyPlantList = () => {
 
-    const [plantList, setPlantList] = useState([]);
-    
-    console.log(plantList)
+    const [ plantList, setPlantList ] = useState([]);
     
     useEffect(() =>{
         axiosWithAuth()
         .get('/plants')
             .then(resp => {
-                console.log(resp)
                 setPlantList(resp.data)
             })
             .catch(err => {
-                console.log(err);
+                console.log({err});
             })
     },[])
 
@@ -24,12 +21,11 @@ const MyPlantList = () => {
         axiosWithAuth()
         .delete(`/plants/${id}`)
             .then(resp => {
-                console.log(resp)
                 const deletedPlant = plantList.filter(plant => plant.plant_id !== id)
                 setPlantList(deletedPlant)
             })
             .catch(err => {
-                console.error(err)
+                console.error({err})
             })
     }
 
@@ -42,7 +38,7 @@ const MyPlantList = () => {
                 )
             })
             .catch(err => {
-                console.error(err)
+                console.error({err})
             })
     }
 

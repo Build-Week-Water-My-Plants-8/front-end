@@ -7,6 +7,8 @@ const initialValues = {
     nickname:'',
     species: '',
     h20_freq: '',
+    plant_image: '',
+    user_id: 1
 }
 
 const AddPlantForm = () => {
@@ -14,23 +16,29 @@ const AddPlantForm = () => {
     const [values, setValues] = useState(initialValues);
     const { navigate } = useNavigate();
 
+
     const handleChange = (event) => {
         setValues({...values,
             [event.target.name]: event.target.value
         })
     }
 
+    // const x = localStorage.id
+
+    // console.log(JSON.stringify(x))
+    // console.log(x.toString())
+
     const handleAdd = (event) => {
         event.preventDefault()
-        console.log('i am working')
         axiosWithAuth()
-            .post('/plants/add', values)
+            // .post('/plants/add', JSON.stringify(x), values)
+            .post('/plants/add', localStorage.id, values)
                 .then(resp => {
                     console.log(resp);
                     navigate('/plants')
                 })
                 .catch(err => {
-                    console.log(err);
+                    console.log({err});
                 })
     }
     
@@ -47,7 +55,6 @@ const AddPlantForm = () => {
                     <input
                     name='nickname'
                     type='text'
-                    name='nickname'
                     onChange={handleChange}
                     />
                 </label>
@@ -58,7 +65,6 @@ const AddPlantForm = () => {
                     <input
                     name='species'
                     type='text'
-                    name='species'
                     onChange={handleChange}
                     />
             </div>
@@ -66,9 +72,17 @@ const AddPlantForm = () => {
             <div className='password-input form-spacing'>
                 <label>Water Frequency</label>
                     <input
-                    name='species'
-                    type='text'
                     name='h20_freq'
+                    type='text'
+                    onChange={handleChange}
+                    />
+            </div>
+
+            <div className='password-input form-spacing'>
+                <label>Image URL</label>
+                    <input
+                    name='plant_image'
+                    type='text'
                     onChange={handleChange}
                     />
             </div>
