@@ -298,11 +298,35 @@ div.plant-links {
   display: flex;
   justify-content: space-evenly;
   color: #354131;
+  margin: 0 4% 6% 4%;
+}
+
+.unit-container {
+  padding: 0 4% 0 4%;
 }
 
 .unit-container h2 {
   text-align: center;
-  margin-top: 25%;
+  margin: 5% 0 10% 0;
+
+  font-size: 1.5rem;
+}
+
+.unit-container h3 {
+  font-size: 1.2rem;
+}
+
+.team-member {
+  margin-bottom: 2rem;
+}
+
+.team-member img {
+  object-fit: cover;
+  width:15rem;
+  height:15rem;
+  border-radius: 50%;
+  padding: 2%;
+  margin-bottom: 5%;
 }
 
 .member-title {
@@ -312,6 +336,14 @@ div.plant-links {
 }
 
 .github-icon {
+  color: #354131;
+}
+
+.team {
+  margin-bottom: 3%;
+  text-align: center;
+  background-color:#FFF8E1;
+  padding: 3%;
   color: #354131;
 }
 
