@@ -1,10 +1,10 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 const EditPlantForm = (props) => {
 
-    const {plant, handleUpdatePlant, formToggle, setFormToggle} = props;
-    const [formValues, setFormValues] = useState(plant);
-
+    const { plant, handleUpdatePlant, formToggle, setFormToggle } = props;
+    const [ formValues, setFormValues ] = useState(plant);
+    
     const onChange = (event) => {
         setFormValues({
             ...formValues,
@@ -19,7 +19,6 @@ const EditPlantForm = (props) => {
 
     return (
         <div>
-            <h1>Edit my plant</h1>
             <form onSubmit={handleSubmit}>
                 <label>Nickname: &nbsp;</label>
                 <input 
@@ -40,8 +39,8 @@ const EditPlantForm = (props) => {
                 <label>Water Frequency: &nbsp;</label>
                 <input 
                 type='text'
-                name='water'
-                value={formValues.h2oFrequency}
+                name='h20_freq'
+                value={formValues.h20_freq}
                 onChange={onChange}
                 />
                 <button>submit</button>

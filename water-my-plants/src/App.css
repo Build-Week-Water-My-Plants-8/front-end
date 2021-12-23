@@ -1,3 +1,4 @@
+/* red borders for testing (delete when finished styling) */
 /* * {
   border: 1px solid red;
 } */
@@ -23,30 +24,47 @@ header a:hover{
 
 .watermyplants a {
   font-weight: bold;
-  /* color: #FFF8E1; */
   font-size: 1.2rem;
 }
 
-.nav-links Button {
-  background-color:#354131;
+#register-btn, #myplants-btn, #profile-btn, #logout-btn, #add-btn {
+  color: #FFF8E1;
+  background-color: #354131;
   border: none;
 }
 
 /* home styles */
 .home-container {
-  background-image: url('');
+  background-image: url ('./Assets/homebg.jpg');
+  background-position: 70% 30% 15%;
+  background-size: 120%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 75vh;
-  width: 100vh;
-  margin: 0 auto;
+  height: 94vh;
+  width: 100%;
+  margin-bottom: 4rem;
 }
 
 .home-button Button {
   padding: 1.5%;
-  background-color: #354131;
-  border: none;
+  background-color:#354131;
+  color:#FFF8E1;
+  border: 1px solid #354131;
+}
+
+.home-text, .home-details, .home-button {
+  width: 33%;
+  margin: 0 auto;
+  color: #354131;
+}
+
+.home-button {
+  text-align: center;
+}
+
+.home-text h1{
+  font-size: 6rem;
 }
 
 
@@ -56,8 +74,8 @@ header a:hover{
   flex-direction: column;
   justify-content: center;
   margin:0 auto;
-  margin-top: 8%;
-  margin-bottom: 18%;
+  margin-top: 5%;
+  margin-bottom: 10%;
   width: 33%;
 }
 
@@ -96,14 +114,171 @@ input {
   border:none;
 }
 
+/* PlantItem styles */
+.plant-item-container {
+
+  width:25%;
+  padding-top: 3%;
+  /* padding-left: 3%; */
+  padding-right: 3%;
+  width:27%;
+  padding-top: 4%;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+.plant-item-img {
+  width: 100%;
+}
+.plant-item-info {
+  display: flex;
+  padding: 2% 5% 2% 1%;
+  /* width: 80%; */
+  justify-content: space-between;
+}
+
+
+.plant-labels h4 {
+  margin-bottom: 0;
+  font-size: 1.2rem;
+}
+
+.edit, .remove{
+  margin: 3%;
+}
+
+.plant-item-img img {
+  object-fit: cover;
+  width:21rem;
+  height:21em;
+}
+
+.plant-labels h4 {
+  margin-bottom: 0;
+  font-size: 1.2rem;
+}
+
+.edit, .remove{
+  margin: 3%;
+}
+
+.plant-item-img img {
+  object-fit: cover;
+  width:20rem;
+  height:20rem;
+}
+
+
+/* Myplant styles */
+.top-container {
+  display:flex;
+  justify-content: center;
+  padding: 2%;
+  background-color: #FFF8E1;
+  color: #354131;
+}
+
+.plant-label {
+  margin: 5%;
+}
+
+.bottom-container {
+  display:flex;
+  justify-content: center;
+  padding: 3%;
+  color: #354131;
+}
+
+.care-info {
+  margin-right: 10%;
+}
+
+.care-info h2 {
+  text-align: center;
+}
+
+.edit-buttons {
+  display:flex;
+  flex-direction: column;
+  margin-left: 5%;
+}
+
+.edit-buttons Button {
+  margin-bottom: 2rem;
+  background-color: #354131;
+}
+
+/* MyPlantList Styles */
+#my-plants {
+  background-color: #FFF8E1;
+  color: #354131;
+  text-align: center;
+  padding: 5%;
+}
+
+.list-container{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 5%;
+}
+
+#add-plant-item a {
+  text-decoration: none;
+  color: #354131;
+}
+
+#add-plant-item {
+  background-color: #FFF8E1;
+  margin-top: 3%;
+  margin-bottom: 5.6%;
+  padding: 6.2% 7% 4.9% 7%;
+  text-align: center;
+  color: #354131;
+}
+
+#add-plant-item h2 {
+  font-size: 5rem;
+}
+
+#add-plant-item p {
+  font-size: 2rem;
+}
+
+/* about page styles */
+.about-container {
+  display: flex;
+  justify-content: space-evenly;
+  color: #354131;
+}
+
+.unit-container h2 {
+  text-align: center;
+}
+
+.member-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.github-icon {
+  color: #354131;
+}
+
 /* footer styles */
 footer {
   border-top: 1px solid black;
-  margin: 5% 5% 0 5%;
+  display: flex;
+  justify-content: space-evenly;
+  height: 4rem;
+  background-color: #64755F;
+  padding: 1% 4% 0 4%;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
 }
 
-footer p {
-  margin-top: 1%;
+footer a {
+  margin-right: 2rem;
+  text-decoration: none;
+  color: #FFF8E1;
 }
-
-
