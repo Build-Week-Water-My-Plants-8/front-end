@@ -29,7 +29,7 @@ export default function Login() {
             .then(res => {
                 localStorage.setItem('id', res.data.user_id);
                 localStorage.setItem('phone_number', res.data.phone_number)
-                console.log(res);
+                // console.log(res);
             })
         })
         
