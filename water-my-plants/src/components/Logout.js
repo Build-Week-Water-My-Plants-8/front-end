@@ -8,6 +8,7 @@ function Logout() {
     localStorage.removeItem('token');
     localStorage.removeItem('username');
     localStorage.removeItem('id');
+    localStorage.removeItem('phone_number');
     useEffect(()=> {
      navigate('/');   
     }, [])

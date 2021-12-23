@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import axiosWithAuth from '../utils/axiosWithAuth';
 import axios from 'axios';
+import { useEffect } from 'react/cjs/react.development';
+import { useNavigate } from 'react-router-dom';
 const initialFormValues = {
     username: "",
     password: "",
@@ -11,7 +13,7 @@ const initialFormValues = {
 export default function SignUp() {
 
     const [formValues, setFormValues] = useState(initialFormValues)
-
+    const navigate = useNavigate();
 
     const signup = () => {
         axiosWithAuth().post('/users/register', {
@@ -21,6 +23,7 @@ export default function SignUp() {
         })
         .then(res => {
             console.log(res);
+            navigate('/login');
         })
         .catch(err => {
             console.log({err});
@@ -38,6 +41,8 @@ export default function SignUp() {
         console.log(formValues);
         signup();
     }
+
+   
 
     return (
         <form className='form-container signup-form' onSubmit={onSubmit}>
@@ -111,7 +116,7 @@ export default function SignUp() {
             </div>
 
             <div className='submit'>
-                <Button id='submit-login'>Sign Up</Button>
+                <Button id='submit-login' >Sign Up</Button>
                 <p className='reroute'>Already have an account? <a href='#'>Login</a></p>
                 {/* link 'Sign up here' to Sign up form */}
             </div>
