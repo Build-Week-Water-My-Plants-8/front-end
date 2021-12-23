@@ -27,7 +27,7 @@ header a:hover{
   font-size: 1.2rem;
 }
 
-#register-btn, #myplants-btn, #profile-btn, #logout-btn {
+#register-btn, #myplants-btn, #profile-btn, #logout-btn, #add-btn {
   color: #FFF8E1;
   background-color: #354131;
   border: none;
@@ -218,6 +218,11 @@ input {
   display: flex;
   flex-wrap: wrap;
   margin: 0 5%;
+}
+
+#add-plant-item a {
+  text-decoration: none;
+  color: #354131;
 }
 
 #add-plant-item {
