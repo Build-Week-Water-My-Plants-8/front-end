@@ -1,17 +1,14 @@
 import React, { useState } from 'react';
 import './App.css';
-//import { useState } from 'react';
 import Header from './components/Header';
 import Home from './components/Home';
 import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import Login from './components/Login';
 import Footer from './components/Footer';
 import MyPlantList from './components/MyPlantList';
-import Profile from './components/Profile';
 import SignUp from './components/SignUp';
 import About from './components/About';
 import PrivateRoute from './components/PrivateRoute';
-// import MyPlant from './components/MyPlant';
 
 
 import Logout from './components/Logout';

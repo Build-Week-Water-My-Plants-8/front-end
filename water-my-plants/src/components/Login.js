@@ -1,7 +1,6 @@
 import React,{ useState } from 'react'
 import axios from 'axios'
-// import './App.css';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Button, FormGroup } from 'reactstrap';
 import { useNavigate } from 'react-router-dom';
 import axiosWithAuth from '../utils/axiosWithAuth';
 const initialFormValues = {
@@ -11,9 +10,12 @@ const initialFormValues = {
 }
 
 export default function Login(props) {
-    const [formValues, setFormValues] = useState(initialFormValues);
-    let navigate = useNavigate();
+    
     const {setIsLoggedIn} = props
+    const navigate = useNavigate();
+    const [formValues, setFormValues] = useState(initialFormValues);
+    
+    
 
     const login = () => {
         axios.post('https://water-my-plants-8.herokuapp.com/api/users/login', {
@@ -31,7 +33,6 @@ export default function Login(props) {
             .then(res => {
                 localStorage.setItem('id', res.data.user_id);
                 localStorage.setItem('phone_number', res.data.phone_number)
-                // console.log(res);
             })
         })
         
@@ -80,7 +81,6 @@ export default function Login(props) {
             <div className='submit'>
                 <Button id='submit-login'>Sign In</Button>
                 <p className='reroute'>Don't have an account? Sign up <a href='/signup'>here</a>!</p>
-                {/* link 'Sign up here' to Sign up form */}
             </div>
             </FormGroup>
         </form>
