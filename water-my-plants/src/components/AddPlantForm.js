@@ -28,7 +28,6 @@ const AddPlantForm = () => {
         axiosWithAuth()
             .post('/plants/add', values)
                 .then(resp => {
-                    console.log(resp);
                     navigate('/plants')
                 })
                 .catch(err => {
