@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Button } from 'reactstrap';
 
 
-export default function Header({isLoggedIn}) {
+export default function Header({isLoggedIn, setIsLoggedIn, token}) {
+    console.log(isLoggedIn)
+    useEffect(() => {
+      token !== null ? setIsLoggedIn(true) : setIsLoggedIn(false)
+  },[setIsLoggedIn, token])
 
   return(
     <header className='header-container'>
