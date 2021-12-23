@@ -18,6 +18,8 @@ export default function Header() {
           { token && <Button id='myplants-btn' href='/plants'>My Plants</Button> }
           { token && <Button id='profile-btn' href='/profile'>Account</Button> } 
           { token && <Button id='logout-btn' href='/logout'>Sign Out</Button> }
+          { token && <Button href='/add'>Add Plant</Button>}
+
 
           {/* may change path name for logout & register depends on jayson's preferences on naming -lia */}
       </div>

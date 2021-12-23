@@ -3,6 +3,7 @@ import axios from 'axios'
 // import './App.css';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { useNavigate } from 'react-router-dom';
+import axiosWithAuth from '../utils/axiosWithAuth';
 const initialFormValues = {
     username: "",
     password: "",
@@ -23,7 +24,15 @@ export default function Login() {
             localStorage.setItem('username', formValues.username)
             localStorage.setItem('token', res.data.token);
             navigate('/plants');
+
+            axiosWithAuth().get('/users')
+            .then(res => {
+                localStorage.setItem('id', res.data.user_id);
+                localStorage.setItem('phone_number', res.data.phone_number)
+                // console.log(res);
+            })
         })
+        
     }
 
     const onChange = (e) => {

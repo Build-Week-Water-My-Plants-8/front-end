@@ -35,7 +35,7 @@ header a:hover{
 
 /* home styles */
 .home-container {
-  background-image: url('./Assets/homebg.jpg');
+  background-image: url ('./Assets/homebg.jpg');
   background-position: 70% 30% 15%;
   background-size: 120%;
   display: flex;
@@ -115,10 +115,15 @@ input {
 
 /* PlantItem styles */
 .plant-item-container {
+
   width:25%;
   padding-top: 3%;
   /* padding-left: 3%; */
   padding-right: 3%;
+  width:27%;
+  padding-top: 4%;
+  padding-left: 4%;
+  padding-right: 4%;
 }
 .plant-item-img {
   width: 100%;
@@ -129,6 +134,7 @@ input {
   /* width: 80%; */
   justify-content: space-between;
 }
+
 
 .plant-labels h4 {
   margin-bottom: 0;
@@ -143,6 +149,21 @@ input {
   object-fit: cover;
   width:21rem;
   height:21em;
+}
+
+.plant-labels h4 {
+  margin-bottom: 0;
+  font-size: 1.2rem;
+}
+
+.edit, .remove{
+  margin: 3%;
+}
+
+.plant-item-img img {
+  object-fit: cover;
+  width:20rem;
+  height:20rem;
 }
 
 
@@ -219,11 +240,17 @@ input {
 /* footer styles */
 footer {
   border-top: 1px solid black;
-  margin: 5% 5% 0 5%;
+  display: flex;
+  justify-content: space-around;
+  background-color: #64755F;
+  height: 4rem;
+  padding: 1% 4% 0 4%;
+  position: fixed;
+  width: 100%;
 }
 
-footer p {
-  margin-top: 1%;
+footer a {
+  margin-right: 2rem;
+  text-decoration: none;
+  color: #FFF8E1;
 }
-
-
