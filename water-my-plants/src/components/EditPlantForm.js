@@ -16,6 +16,7 @@ const EditPlantForm = (props) => {
     const handleSubmit=(event) => {
         event.preventDefault();
         handleUpdatePlant(formValues)
+        setFormToggle(!formToggle)
     }
 
     return (
@@ -51,6 +52,16 @@ const EditPlantForm = (props) => {
                 type='text'
                 name='h20_freq'
                 value={formValues.h20_freq}
+                onChange={onChange}
+                />
+                </div>
+
+                <div className='form-spacing'>
+                <label>Image URL: &nbsp;</label>
+                <input 
+                type='text'
+                name='plant_image'
+                value={formValues.plant_image}
                 onChange={onChange}
                 />
                 </div>

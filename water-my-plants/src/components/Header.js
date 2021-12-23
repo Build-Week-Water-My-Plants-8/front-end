@@ -4,8 +4,6 @@ import { Button } from 'reactstrap';
 
 export default function Header({isLoggedIn}) {
 
-  console.log(isLoggedIn)
-
   return(
     <header className='header-container'>
       <div className='watermyplants'>
