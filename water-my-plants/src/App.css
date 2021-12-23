@@ -303,7 +303,6 @@ div.plant-links {
 
 .unit-container {
   padding: 0 4% 0 4%;
-  /* border: 1px solid #354131; */
 }
 
 .unit-container h2 {
@@ -333,6 +332,10 @@ div.plant-links {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.member-title h3 {
+  text-align: center;
 }
 
 .github-icon {

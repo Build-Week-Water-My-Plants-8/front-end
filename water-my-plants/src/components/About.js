@@ -16,10 +16,7 @@ export default function About() {
           <div className='team-member'>
             <img src={require('../Assets/team/arias.png')} alt='Profile pic of Arison Arias' />
             <div className='member-title'>
-              <h3>Arison Arias</h3>
-              <h3>
-                <a href='https://github.com/Arison13'><FaGithub className='github-icon' /></a>
-              </h3>
+              <h3>Arison Arias <a href='https://github.com/Arison13'><FaGithub className='github-icon' /></a></h3>
             </div>
             <h5>Backend Engineer</h5>
           </div>
@@ -27,10 +24,7 @@ export default function About() {
           <div className='team-member'>
             <img src={require('../Assets/team/jared.png')} alt='Profile pic of Jared Hall' />
             <div className='member-title'>
-              <h3>Jared Hall</h3>
-              <h3>
-                <a href='https://github.com/Jaredhall18'><FaGithub className='github-icon' /></a>
-              </h3>
+              <h3>Jared Hall <a href='https://github.com/Jaredhall18'><FaGithub className='github-icon' /></a></h3>
             </div>
             <h5>Backend Engineer</h5>
           </div>
@@ -42,10 +36,7 @@ export default function About() {
           <div className='team-member'>
             <img src={require('../Assets/team/jayson.png')} alt='Profile pic of Jayson Byrd' />
             <div className='member-title'>
-              <h3>Jayson Byrd</h3>
-              <h3>
-                <a href='https://github.com/ByrdJayson'><FaGithub className='github-icon' /></a>
-              </h3>
+              <h3>Jayson Byrd <a href='https://github.com/ByrdJayson'><FaGithub className='github-icon' /></a></h3>
             </div>
             <h5>Frontend React Engineer</h5>
           </div>
@@ -53,10 +44,7 @@ export default function About() {
           <div className='team-member'>
             <img src={require('../Assets/team/me.png')} alt='Profile pic of Lia Moua' />
             <div className='member-title'>
-              <h3>Lia Moua</h3>
-              <h3>
-                <a href='https://github.com/moua0061'><FaGithub className='github-icon' /></a>
-              </h3>
+              <h3>Lia Moua <a href='https://github.com/moua0061'><FaGithub className='github-icon' /></a></h3>
             </div>
             <h5>Frontend React Engineer</h5>
           </div>
@@ -64,10 +52,7 @@ export default function About() {
           <div className='team-member'>
             <img src={require('../Assets/team/ryan.png')} alt='Profile pic of Ryan Howard' />
             <div className='member-title'>
-              <h3>Ryan Howard</h3>
-              <h3>
-                <a href='https://github.com/ryansnorek'><FaGithub className='github-icon' /></a>
-              </h3>
+              <h3>Ryan Howard <a href='https://github.com/ryansnorek'><FaGithub className='github-icon' /></a></h3>
             </div>
             <h5>Frontend React Engineer</h5>
           </div>
@@ -79,10 +64,7 @@ export default function About() {
           <div className='team-member'>
             <img src={require('../Assets/team/kayla.png')} alt='Profile pic of Kayla Famurewa' />
             <div className='member-title'>
-              <h3>Kayla Famurewa</h3>
-              <h3>
-                <a href='https://github.com/kfam22'><FaGithub className='github-icon' /></a>
-              </h3>
+              <h3>Kayla Famurewa <a href='https://github.com/kfam22'><FaGithub className='github-icon' /></a></h3>
             </div>
             <h5>Frontend React Engineer</h5>
           </div>
@@ -90,10 +72,7 @@ export default function About() {
           <div className='team-member'>
             <img src={require('../Assets/team/brandon.png')} alt='Profile pic of Brandon Booth' />
             <div className='member-title'>
-              <h3>Brandon Booth</h3>
-              <h3>
-                <a href='https://github.com/brandon-bee'><FaGithub className='github-icon' /></a>
-              </h3>
+              <h3>Brandon Booth <a href='https://github.com/brandon-bee'><FaGithub className='github-icon' /></a></h3>
             </div>
             <h5>Frontend React Engineer</h5>
           </div>
@@ -101,10 +80,7 @@ export default function About() {
           <div className='team-member'>
             <img src={require('../Assets/team/gage.png')} alt='Profile pic of Gage Milligan' />
             <div className='member-title'>
-              <h3>Gage Milligan</h3>
-              <h3>
-                <a href='https://github.com/gagemilligan'><FaGithub className='github-icon' /></a>
-              </h3>
+              <h3>Gage Milligan <a href='https://github.com/gagemilligan'><FaGithub className='github-icon' /></a></h3>
             </div>
             <h5>Frontend React Engineer</h5>
           </div>
