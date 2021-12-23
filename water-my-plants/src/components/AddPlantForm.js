@@ -1,14 +1,42 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { useNavigate } from 'react-router-dom';
 import axiosWithAuth from '../utils/axiosWithAuth';
 
+const initialValues = {
+    nickname:'',
+    species: '',
+    h20_freq: '',
+}
 
 const AddPlantForm = () => {
+
+    const [values, setValues] = useState(initialValues);
+    const { navigate } = useNavigate();
+
+    const handleChange = (event) => {
+        setValues({...values,
+            [event.target.name]: event.target.value
+        })
+    }
+
+    const handleAdd = (event) => {
+        event.preventDefault()
+        console.log('i am working')
+        axiosWithAuth()
+            .post('/plants/add', values)
+                .then(resp => {
+                    console.log(resp);
+                    navigate('/plants')
+                })
+                .catch(err => {
+                    console.log(err);
+                })
+    }
     
 
     return(
-        <form className='form-container login-form'>
+        <form className='form-container login-form' onSubmit={handleAdd}>
 
             <div className='form-title'>
                 <h1>Add A Plant!</h1>
@@ -19,7 +47,8 @@ const AddPlantForm = () => {
                     <input
                     name='nickname'
                     type='text'
-                    
+                    name='nickname'
+                    onChange={handleChange}
                     />
                 </label>
             </div>
@@ -29,8 +58,8 @@ const AddPlantForm = () => {
                     <input
                     name='species'
                     type='text'
-                    // style={{ width:'500px'}}
-                    
+                    name='species'
+                    onChange={handleChange}
                     />
             </div>
 
@@ -39,8 +68,8 @@ const AddPlantForm = () => {
                     <input
                     name='species'
                     type='text'
-                    // style={{ width:'500px'}}
-                    
+                    name='h20_freq'
+                    onChange={handleChange}
                     />
             </div>
 

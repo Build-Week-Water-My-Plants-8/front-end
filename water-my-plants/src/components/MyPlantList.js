@@ -12,6 +12,7 @@ const MyPlantList = () => {
         axiosWithAuth()
         .get('/plants')
             .then(resp => {
+                console.log(resp)
                 setPlantList(resp.data)
             })
             .catch(err => {
