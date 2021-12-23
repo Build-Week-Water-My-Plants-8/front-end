@@ -326,16 +326,13 @@ div.plant-links {
   height:15rem;
   border-radius: 50%;
   padding: 2%;
+  margin-bottom: 5%;
 }
 
 .member-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.member-title h3 {
-  text-align: center;
 }
 
 .github-icon {
