@@ -12,22 +12,36 @@ const MyPlant = (props) => {
  
 
     return (
-        <div>
-            <img src={plant.image} alt='plant' width='25%' />
-            <h1>{plant.nickname}</h1>
-            <p>Species: {plant.species}</p>
-            <p>Water Frequency: {plant.h2oFrequency}</p>
-            <button onClick={()=> {setFormToggle(!formToggle)}}>edit me!</button>
-            <button onClick={handleDelete}>delete</button>
-            { formToggle && 
-                <EditPlantForm plant={plant} handleUpdatePlant={handleUpdatePlant} formToggle={formToggle} setFormToggle={setFormToggle}/>}
+        <div className='plant-container'>
+            <div className='top-container'>
+                <div className='plant-label'>
+                    <h1>{plant.nickname}</h1>
+                    <p>Species: {plant.species}</p>  
+                </div>
+                <img src={plant.image} alt='plant' width='25%' />
+            </div>
+
+            <div className='bottom-container'>
+                <div className='care-label'>
+                    <h2>Care</h2>
+                    <p>Water Frequency: {plant.h2ofrequency}</p>   
+                    <p>Optimal Sunlight: Direct Sunlight</p> 
+                    <p>Optimal Temperature: 65-75°</p> 
+                </div>
+           
+                <div className='edit-buttons'>
+                    <Button onClick={()=> {setFormToggle(!formToggle)}}>edit</Button>
+                    <Button onClick={handleDelete}>delete</Button>
+                    { formToggle && 
+                        <EditPlantForm plant={plant} handleUpdatePlant={handleUpdatePlant} formToggle={formToggle} setFormToggle={setFormToggle}/>}
+                </div>
+            </div>
         </div>
-        
-        
     )
 }
 
 export default MyPlant;
+
 
 
 

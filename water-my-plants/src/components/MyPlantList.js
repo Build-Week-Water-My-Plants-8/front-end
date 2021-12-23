@@ -85,7 +85,7 @@ const MyPlantList = () => {
                 }
 
                 <div id='add-plant-item'>
-                    <a>
+                    <a href='#'>
                     <h2>+</h2>
                     <p>Add Plant</p>
                     </a>

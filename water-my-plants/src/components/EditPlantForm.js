@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { Button, FormGroup } from 'reactstrap';
 
 const EditPlantForm = (props) => {
 
@@ -18,9 +19,13 @@ const EditPlantForm = (props) => {
     }
 
     return (
-        <div>
+        <div className='edit-plant'>
+            <form className='form-container edit-form' onSubmit={handleSubmit}>
+            <div className='form-title'>
             <h1>Edit my plant</h1>
-            <form onSubmit={handleSubmit}>
+            </div>
+            <FormGroup className='formGroup'>
+            <div className='form-spacing'>
                 <label>Nickname: &nbsp;</label>
                 <input 
                 type='text'
@@ -28,7 +33,9 @@ const EditPlantForm = (props) => {
                 value={formValues.nickname}
                 onChange={onChange}
                 />
+            </div>
 
+            <div className='form-spacing'>
                 <label>Species: &nbsp;</label>
                 <input 
                 type='text'
@@ -36,7 +43,9 @@ const EditPlantForm = (props) => {
                 value={formValues.species}
                 onChange={onChange}
                 />
+            </div>
 
+            <div className='form-spacing'>
                 <label>Water Frequency: &nbsp;</label>
                 <input 
                 type='text'
@@ -44,9 +53,14 @@ const EditPlantForm = (props) => {
                 value={formValues.h2oFrequency}
                 onChange={onChange}
                 />
-                <button>submit</button>
+                </div>
+
+                <div className='submit'>
+                <Button>submit</Button>
+                <Button color='link' id='cancel' onClick={()=> {setFormToggle(!formToggle)}}>cancel</Button>
+                </div>
+            </FormGroup>
             </form>
-            <button onClick={()=> {setFormToggle(!formToggle)}}>cancel</button>
         </div>
     )
 }
