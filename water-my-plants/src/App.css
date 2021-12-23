@@ -27,7 +27,7 @@ header a:hover{
   font-size: 1.2rem;
 }
 
-#register-btn, #myplants-btn, #profile-btn, #logout-btn, #add-btn {
+#register-btn, #myplants-btn, #profile-btn, #logout-btn, #add-btn, #home-btn {
   color: #FFF8E1;
   background-color: #354131;
   border: none;
@@ -35,7 +35,7 @@ header a:hover{
 
 /* home styles */
 .home-container {
-  background-image: url ('./Assets/homebg.jpg');
+  background-image: url('./Assets/homebg.jpg');
   background-position: 70% 30% 15%;
   background-size: 120%;
   display: flex;
@@ -44,6 +44,7 @@ header a:hover{
   height: 94vh;
   width: 100%;
   margin-bottom: 4rem;
+  padding-bottom: 10rem;
 }
 
 .home-button Button {
@@ -90,6 +91,13 @@ header a:hover{
   color: #354131;
 }
 
+.multiple-form-titles h1{
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-top: 5%;
+  color: #354131;
+}
+
 .form-spacing {
   margin-bottom: 2%;
 }
@@ -114,12 +122,24 @@ input {
   border:none;
 }
 
+#cancel {
+  background-color: white;
+}
+
+.edit-form {
+  width: 500px;
+  padding: 0 10% 0 10%;
+}
+
+/* .info-edit {
+  margin-top: 5%;
+} */
+
 /* PlantItem styles */
 .plant-item-container {
 
   width:25%;
   padding-top: 3%;
-  /* padding-left: 3%; */
   padding-right: 3%;
   width:27%;
   padding-top: 4%;
@@ -132,7 +152,7 @@ input {
 .plant-item-info {
   display: flex;
   padding: 2% 5% 2% 1%;
-  /* width: 80%; */
+  width: 21rem;
   justify-content: space-between;
 }
 
@@ -150,6 +170,10 @@ input {
   object-fit: cover;
   width:21rem;
   height:21em;
+}
+
+div.plant-links {
+  width: 130px;
 }
 
 .plant-labels h4 {
@@ -177,8 +201,21 @@ input {
   color: #354131;
 }
 
+.top-container img {
+  object-fit: cover;
+  width:30rem;
+  height:30em;
+}
+
 .plant-label {
-  margin: 5%;
+  margin: 2%;
+  padding-top: 10%;
+  width: 300px;
+  text-align: center;
+}
+
+.plant-label h1 {
+  font-size: 3.5rem;
 }
 
 .bottom-container {
@@ -186,6 +223,11 @@ input {
   justify-content: center;
   padding: 3%;
   color: #354131;
+}
+
+.care-label {
+  /* margin: 0 2% 0 2%; */
+  width: 500px;
 }
 
 .care-info {
@@ -200,6 +242,7 @@ input {
   display:flex;
   flex-direction: column;
   margin-left: 5%;
+  margin-top: 3%;
 }
 
 .edit-buttons Button {
@@ -230,8 +273,15 @@ input {
   background-color: #FFF8E1;
   margin-top: 3%;
   margin-bottom: 5.6%;
+  margin-left: 2%;
   padding: 6.2% 7% 4.9% 7%;
   text-align: center;
+  height: 338px;
+  width: 338px;
+}
+
+#add-plant-item a {
+  text-decoration: none;
   color: #354131;
 }
 
@@ -252,6 +302,7 @@ input {
 
 .unit-container h2 {
   text-align: center;
+  margin-top: 25%;
 }
 
 .member-title {
@@ -266,7 +317,6 @@ input {
 
 /* footer styles */
 footer {
-  border-top: 1px solid black;
   display: flex;
   justify-content: space-evenly;
   height: 4rem;

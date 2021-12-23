@@ -47,7 +47,7 @@ const AddPlantForm = () => {
         <form className='form-container login-form' onSubmit={handleAdd}>
 
             <div className='form-title'>
-                <h1>Add A Plant!</h1>
+                <h1>Add A Plant</h1>
             </div>
             <FormGroup className='formGroup'>
             <div className='username-input form-spacing'>

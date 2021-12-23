@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from 'reactstrap';
+import EditPlantForm from "./EditPlantForm";
 
 export default function PlantItem(props) {
-    const { plant } = props;
+
+    const { plant, handleDelete, handleUpdatePlant } = props;
+
+    const [formToggle, setFormToggle] = useState(false);
 
     return (
         <div className='plant-item-container'>
             <div className='plant-item-img'>
                 <img 
-                src={plant.image} 
-                src='https://images.unsplash.com/photo-1453904300235-0f2f60b15b5d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80' 
-
+                src={plant.image}  
                 alt='plant' 
                 width='100%'
                 />
@@ -20,13 +22,25 @@ export default function PlantItem(props) {
             <div className='plant-labels'>
                 <h4>{plant.nickname}</h4>
                 <p>{plant.species}</p>
-                <h4>plant nickname</h4>
-                <p>plant name</p>
             </div>
 
             <div className='plant-links'>
-                <a className='edit'>edit</a>
-                <a className='remove'>remove</a>
+                <Button
+                color='link' 
+                size='sm' 
+                className='edit'
+                onClick={()=> {setFormToggle(!formToggle)}}>
+                edit
+                </Button>
+                <Button 
+                color='link' 
+                size='sm' 
+                className='remove'
+                onClick={handleDelete}>
+                remove
+                </Button>
+                { formToggle && 
+                <EditPlantForm plant={plant} handleUpdatePlant={handleUpdatePlant} formToggle={formToggle} setFormToggle={setFormToggle}/>}
             </div>
         </div>
     </div>

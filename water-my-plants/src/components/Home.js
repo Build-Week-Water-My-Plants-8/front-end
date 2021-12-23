@@ -15,7 +15,7 @@ export default function Home() {
       </div>
 
       <div className='home-button'>
-        <Button>Register Now</Button>
+        <Button id='home-btn' href='/signup'>Register Now</Button>
       </div>
     </div>
   )

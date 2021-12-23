@@ -70,7 +70,6 @@ export default function Login() {
                     <input
                     name='password'
                     type='password'
-                    // style={{ width:'500px'}}
                     value={formValues.password}
                     onChange={onChange}
                     />
