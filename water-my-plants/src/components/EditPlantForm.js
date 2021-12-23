@@ -1,9 +1,9 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 const EditPlantForm = (props) => {
 
-    const {plant, handleUpdatePlant, formToggle, setFormToggle} = props;
-    const [formValues, setFormValues] = useState(plant);
+    const { plant, handleUpdatePlant, formToggle, setFormToggle } = props;
+    const [ formValues, setFormValues ] = useState(plant);
     
     const onChange = (event) => {
         setFormValues({
@@ -19,7 +19,6 @@ const EditPlantForm = (props) => {
 
     return (
         <div>
-            <h1>Edit my plant</h1>
             <form onSubmit={handleSubmit}>
                 <label>Nickname: &nbsp;</label>
                 <input 
