@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import MyPlantList from './components/MyPlantList';
 import Profile from './components/Profile';
 import SignUp from './components/SignUp';
+import About from './components/About';
 // import PrivateRoute from './components/PrivateRoute';
 // import MyPlant from './components/MyPlant';
 
@@ -31,6 +32,7 @@ function App() {
           <Route path={'/plants'} element={<MyPlantList />} /> 
           <Route path={'/logout'} element={<Logout />} />
           <Route path={'/add'} element={<AddPlantForm />} />
+          <Route path={'/about'} element={<About />} />
 
           {/* uncomment this when Kayla is done with the conditional rendering on the navbar links -Lia */}
           {/* <Route path={'/plants'} 
@@ -43,7 +45,7 @@ function App() {
         </Routes>
       </BrowserRouter>
       
-      <Footer/>
+      <Footer />
     </div>
     
   );
