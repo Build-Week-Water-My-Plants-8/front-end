@@ -79,7 +79,7 @@ export default function Login(props) {
 
             <div className='submit'>
                 <Button id='submit-login'>Sign In</Button>
-                <p className='reroute'>Don't have an account? Sign up <a href='#'>here</a>!</p>
+                <p className='reroute'>Don't have an account? Sign up <a href='/signup'>here</a>!</p>
                 {/* link 'Sign up here' to Sign up form */}
             </div>
             </FormGroup>
