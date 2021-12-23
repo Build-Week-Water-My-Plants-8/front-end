@@ -23,13 +23,12 @@ header a:hover{
 
 .watermyplants a {
   font-weight: bold;
-  /* color: #FFF8E1; */
   font-size: 1.2rem;
 }
 
-.nav-links Button {
-  margin-right: 5px;
-  background-color:#354131;
+#register-btn, #myplants-btn, #profile-btn, #logout-btn {
+  color: #FFF8E1;
+  background-color: #354131;
   border: none;
 }
 
@@ -41,7 +40,7 @@ header a:hover{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 85vh;
+  height: 94vh;
   width: 100%;
 }
 
@@ -113,8 +112,37 @@ input {
   border:none;
 }
 
-/* Plant Item styles */
+/* PlantItem styles */
+.plant-item-container {
+  width:27%;
+  padding-top: 4%;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+.plant-item-img {
+  width: 100%;
+}
+.plant-item-info {
+  display: flex;
+  padding: 2% 5% 2% 1%;
+  /* width: 80%; */
+  justify-content: space-between;
+}
 
+.plant-labels h4 {
+  margin-bottom: 0;
+  font-size: 1.2rem;
+}
+
+.edit, .remove{
+  margin: 3%;
+}
+
+.plant-item-img img {
+  object-fit: cover;
+  width:20rem;
+  height:20rem;
+}
 
 
 /* Myplant styles */
