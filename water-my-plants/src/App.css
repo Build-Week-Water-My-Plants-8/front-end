@@ -332,3 +332,7 @@ footer a {
   text-decoration: none;
   color: #FFF8E1;
 }
+
+footer a:hover{
+  color:#354131;
+}
