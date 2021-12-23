@@ -17,15 +17,13 @@ const MyPlant = (props) => {
             </div>
 
             <div className='plant-item-info'>
-            <div className='plant-labels'>
-                <h1>{plant.nickname}</h1>
-                <p>Species: {plant.species}</p>
-                <p>Water Frequency: {plant.h20_freq}</p>
-            </div>
-
-            <div className='plant-links'>
-                <a className='edit'>edit</a>
-                <a className='remove'>remove</a>
+                <div className='plant-labels'>
+                    <h4>{plant.nickname}</h4>
+                    <p>{plant.species}</p>
+                    <p>{plant.h20_freq}</p>
+                    <h4>Nickname</h4>
+                    <p>Species</p>
+                    <p>Water frequency</p>
             </div>
 
                 <button onClick={()=> {setFormToggle(!formToggle)}}>edit me!</button>

@@ -4,12 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import axiosWithAuth from '../utils/axiosWithAuth';
 
 
-const initialFormValues = {
-    username: "",
-    password: "",
-    phone_number: ""
-}
-
 const AddPlantForm = () => {
     
 
@@ -52,8 +46,6 @@ const AddPlantForm = () => {
 
             <div className='submit'>
                 <Button id='submit-login'>Submit</Button>
-                {/* <p className='reroute'>Don't have an account? Sign up <a href='#'>here</a>!</p>
-                link 'Sign up here' to Sign up form */}
             </div>
             </FormGroup>
             </form>

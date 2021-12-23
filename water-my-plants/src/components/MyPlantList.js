@@ -45,23 +45,22 @@ const MyPlantList = () => {
             })
     }
 
-
     return(
         <div className="plantList-container">
             <h1 id='my-plants'>My Plants</h1>
             <div className='list-container'>
-                <div id='add-plant-item'>
-                    <a href='/add'>
-                        <h2>+</h2>
-                        <p>Add Plant</p>
-                    </a>
-                </div>
-            </div>
-            <h1>My Plants!</h1>
             { plantList.map((plant, i) => {
                     return <MyPlant plant={plant} key={i} handleDelete={handleDelete} handleUpdatePlant={handleUpdatePlant} />
                 })
             }
+            </div>
+
+            <div id='add-plant-item'>
+                    <a href='/add'>
+                        <h2>+</h2>
+                        <p>Add Plant</p>
+                    </a>
+                    </div>
         </div>
     )
 }
