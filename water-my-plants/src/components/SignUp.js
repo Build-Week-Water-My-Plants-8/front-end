@@ -142,7 +142,6 @@ export default function SignUp() {
             <div className='submit'>
                 <Button id='submit-login' >Sign Up</Button>
                 <p className='reroute'>Already have an account? <a href='/login'>Login</a></p>
-                {/* link 'Sign up here' to Sign up form */}
             </div>
             </FormGroup>
         </form>

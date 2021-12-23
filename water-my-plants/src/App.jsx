@@ -10,7 +10,6 @@ import SignUp from './components/SignUp';
 import About from './components/About';
 import PrivateRoute from './components/PrivateRoute';
 
-
 import Logout from './components/Logout';
 import AddPlantForm from './components/AddPlantForm';
 
