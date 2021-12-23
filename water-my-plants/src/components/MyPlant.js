@@ -1,15 +1,13 @@
-import { Button} from 'reactstrap';
-import React, {useState} from "react";
+import React, { useState } from "react";
 import EditPlantForm from "./EditPlantForm";
+import { Button } from 'reactstrap';
 
 
 const MyPlant = (props) => {
 
-    const {plant, handleDelete, handleUpdatePlant} = props;
+    const { plant, handleDelete, handleUpdatePlant, id, navigate } = props;
 
-    const [formToggle, setFormToggle] = useState(false);
-    
- 
+    const [ formToggle, setFormToggle ] = useState(false);
 
     return (
         <div className='plant-container'>
@@ -31,9 +29,9 @@ const MyPlant = (props) => {
            
                 <div className='edit-buttons'>
                     <Button onClick={()=> {setFormToggle(!formToggle)}}>edit</Button>
-                    <Button onClick={handleDelete}>delete</Button>
+                    <Button onClick={()=> handleDelete(plant.plant_id)}>delete</Button>
                     { formToggle && 
-                        <EditPlantForm plant={plant} handleUpdatePlant={handleUpdatePlant} formToggle={formToggle} setFormToggle={setFormToggle}/>}
+                    <EditPlantForm plant={plant} handleUpdatePlant={handleUpdatePlant} formToggle={formToggle} setFormToggle={setFormToggle} id={id} navigate={navigate} />}
                 </div>
             </div>
         </div>

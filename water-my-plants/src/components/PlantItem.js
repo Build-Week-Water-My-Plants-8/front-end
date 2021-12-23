@@ -12,7 +12,7 @@ export default function PlantItem(props) {
         <div className='plant-item-container'>
             <div className='plant-item-img'>
                 <img 
-                src={plant.image} 
+                src={plant.image}  
                 alt='plant' 
                 width='100%'
                 />

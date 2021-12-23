@@ -27,7 +27,7 @@ header a:hover{
   font-size: 1.2rem;
 }
 
-#register-btn, #myplants-btn, #profile-btn, #logout-btn {
+#register-btn, #myplants-btn, #profile-btn, #logout-btn, #add-btn, #home-btn {
   color: #FFF8E1;
   background-color: #354131;
   border: none;
@@ -43,6 +43,8 @@ header a:hover{
   justify-content: center;
   height: 94vh;
   width: 100%;
+  margin-bottom: 4rem;
+  padding-bottom: 10rem;
 }
 
 .home-button Button {
@@ -89,6 +91,13 @@ header a:hover{
   color: #354131;
 }
 
+.multiple-form-titles h1{
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-top: 5%;
+  color: #354131;
+}
+
 .form-spacing {
   margin-bottom: 2%;
 }
@@ -122,11 +131,20 @@ input {
   padding: 0 10% 0 10%;
 }
 
+/* .info-edit {
+  margin-top: 5%;
+} */
+
 /* PlantItem styles */
 .plant-item-container {
+
   width:25%;
   padding-top: 3%;
   padding-right: 3%;
+  width:27%;
+  padding-top: 4%;
+  padding-left: 4%;
+  padding-right: 4%;
 }
 .plant-item-img {
   width: 100%;
@@ -137,6 +155,7 @@ input {
   width: 21rem;
   justify-content: space-between;
 }
+
 
 .plant-labels h4 {
   margin-bottom: 0;
@@ -155,6 +174,21 @@ input {
 
 div.plant-links {
   width: 130px;
+}
+
+.plant-labels h4 {
+  margin-bottom: 0;
+  font-size: 1.2rem;
+}
+
+.edit, .remove{
+  margin: 3%;
+}
+
+.plant-item-img img {
+  object-fit: cover;
+  width:20rem;
+  height:20rem;
 }
 
 
@@ -230,13 +264,20 @@ div.plant-links {
   margin: 0 5%;
 }
 
+#add-plant-item a {
+  text-decoration: none;
+  color: #354131;
+}
+
 #add-plant-item {
   background-color: #FFF8E1;
   margin-top: 3%;
   margin-bottom: 5.6%;
+  margin-left: 2%;
   padding: 6.2% 7% 4.9% 7%;
   text-align: center;
   height: 338px;
+  width: 338px;
 }
 
 #add-plant-item a {
@@ -252,14 +293,42 @@ div.plant-links {
   font-size: 2rem;
 }
 
+/* about page styles */
+.about-container {
+  display: flex;
+  justify-content: space-evenly;
+  color: #354131;
+}
+
+.unit-container h2 {
+  text-align: center;
+  margin-top: 25%;
+}
+
+.member-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.github-icon {
+  color: #354131;
+}
+
 /* footer styles */
 footer {
-  border-top: 1px solid black;
-  margin: 5% 5% 0 5%;
+  display: flex;
+  justify-content: space-evenly;
+  height: 4rem;
+  background-color: #64755F;
+  padding: 1% 4% 0 4%;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
 }
 
-footer p {
-  margin-top: 1%;
+footer a {
+  margin-right: 2rem;
+  text-decoration: none;
+  color: #FFF8E1;
 }
-
-

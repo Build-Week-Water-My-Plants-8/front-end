@@ -1,97 +1,63 @@
-
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
 import axiosWithAuth from '../utils/axiosWithAuth';
 import PlantItem from "./PlantItem";
 
-
-//dummy data
-const plants = [{
-    id: 1,
-    nickname: 'plant',
-    species: 'Fig',
-    h2oFrequency: 'water me often',
-    image: 'https://images.unsplash.com/photo-1453904300235-0f2f60b15b5d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80'
-},
-{
-    id: 2,
-    nickname: 'plant two',
-    species: 'Monsteria',
-    h2oFrequency: 'water me once a week',
-    image: 'https://images.unsplash.com/photo-1453904300235-0f2f60b15b5d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80'
-},
-{
-    id: 3,
-    nickname: 'plant three',
-    species: 'succulent',
-    h2oFrequency: 'water me once every other week',
-    image: 'https://images.unsplash.com/photo-1453904300235-0f2f60b15b5d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80'
-}]
-
 const MyPlantList = () => {
 
-    const [plantList, setPlantList] = useState(plants);
-
-    // GET API call
-    // console.log(plants);
-    // useEffect(() =>{
-    //     axiosWithAuth()
-    //      .get('/endpoint)
-    //     .then(resp => {
-    //         console.log(resp);
-    //     })
-    //     .catch(err => {
-    //         console.log(err);
-    //     })
-    // })
-
-    //  DELETE DATA
-    const handleDelete = (id) => {
-        console.log('i am a delete')
+    const [ plantList, setPlantList ] = useState([]);
+    
+    useEffect(() =>{
         axiosWithAuth()
-        .delete(`/endpoint/${id}`) //don't forget the backticks ` or it will break
+        .get('/plants')
             .then(resp => {
-                console.log(resp)
                 setPlantList(resp.data)
             })
             .catch(err => {
-                console.error(err)
+                console.log({err});
+            })
+    },[])
+
+    const handleDelete = (id) => {
+        axiosWithAuth()
+        .delete(`/plants/${id}`)
+            .then(resp => {
+                const deletedPlant = plantList.filter(plant => plant.plant_id !== id)
+                setPlantList(deletedPlant)
+            })
+            .catch(err => {
+                console.error({err})
             })
     }
-
 
     const handleUpdatePlant = (newPlant) => {
         axiosWithAuth()
-        .put('/endpoint', newPlant)
+        .put(`/plants/${newPlant.plant_id}`, newPlant)
             .then(resp => {
-                console.log(resp)
-                
+                setPlantList(
+                    plantList.filter(plant => plant.plant_id !== newPlant.plant_id).concat([resp.data])
+                )
             })
             .catch(err => {
-                console.error(err)
+                console.error({err})
             })
     }
 
-
     return(
         <div className="plantList-container">
-            
             <h1 id='my-plants'>My Plants</h1>
             <div className='list-container'>
-                {  
-                    plantList.map((plant, i) => {
-                        return <PlantItem plant={plant} key={i} handleDelete={handleDelete} handleUpdatePlant={handleUpdatePlant} />
-                        
-                    })
-                }
+            { plantList.map((plant, i) => {
+                    return <PlantItem plant={plant} key={i} handleDelete={handleDelete} handleUpdatePlant={handleUpdatePlant} />
+                })
+            }
+            </div>
 
                 <div id='add-plant-item'>
-                    <a href='#'>
+                    <a href='/add'>
                     <h2>+</h2>
                     <p>Add Plant</p>
                     </a>
-                </div>
-
-            </div>
+                    </div>
         </div>
     )
 }
