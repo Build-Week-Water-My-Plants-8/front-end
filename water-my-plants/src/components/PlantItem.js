@@ -12,7 +12,7 @@ export default function PlantItem(props) {
         <div className='plant-item-container'>
             <div className='plant-item-img'>
                 <img 
-                src={plant.image}  
+                src={plant.plant_image}  
                 alt='plant' 
                 width='100%'
                 />
@@ -36,7 +36,7 @@ export default function PlantItem(props) {
                 color='link' 
                 size='sm' 
                 className='remove'
-                onClick={handleDelete}>
+                onClick={() => handleDelete(plant.plant_id)}>
                 remove
                 </Button>
                 { formToggle && 
