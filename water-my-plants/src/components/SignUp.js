@@ -2,14 +2,26 @@ import React, { useState } from 'react'
 import { Button, FormGroup} from 'reactstrap';
 import axiosWithAuth from '../utils/axiosWithAuth';
 import { useNavigate } from 'react-router-dom';
+import * as yup from 'yup';
+import signUpSchema from '../validation/signUpSchema';
+
 const initialFormValues = {
     username: "",
     password: "",
-    phone_number: ""
+    phone_number: "",
+    confirm: ""
 }
+const initialFormErrors = {
+    username: '',
+    password: '',
+    phone_number: '',
+    confirm: ''
+}
+
 export default function SignUp() {
 
-    const [formValues, setFormValues] = useState(initialFormValues)
+    const [formValues, setFormValues] = useState(initialFormValues);
+    const [formErrors, setFormErrors] = useState(initialFormErrors);
     const navigate = useNavigate();
 
     const signup = () => {
@@ -26,7 +38,16 @@ export default function SignUp() {
             console.log({err});
         })
     }
+
+    const validate = (name, value) => {
+        yup.reach(signUpSchema, name)
+            .validate(value)
+            .then(() => setFormErrors({ ...formErrors, [name]: '' }))
+            .catch(err => setFormErrors({ ...formErrors, [name]: err.errors[0] }))
+    }
+
     const onChange = (e) => {
+        validate(e.target.name, e.target.value)
         setFormValues({
             ...formValues,
             [e.target.name]: e.target.value
@@ -46,6 +67,12 @@ export default function SignUp() {
 
             <div className='form-title'>
                 <h1>Sign Up</h1>
+            </div>
+            <div className='errors-container'>
+                <div>{formErrors.username}</div>
+                <div>{formErrors.password}</div>
+                <div>{formErrors.confirm}</div>
+                <div>{formErrors.phone_number}</div>
             </div>
             <FormGroup className='formGroup'>
             <div className='first-name-input form-spacing'>
@@ -107,8 +134,8 @@ export default function SignUp() {
                     <input
                     name='confirm'
                     type='password'
-                    // value= 'placeholder'
-                    // onChange= 'placeholder'
+                    value={formValues.confirm}
+                    onChange={onChange}
                     />
             </div>
 
