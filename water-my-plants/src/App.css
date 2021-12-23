@@ -271,13 +271,13 @@ div.plant-links {
 
 #add-plant-item {
   background-color: #FFF8E1;
-  margin-top: 3%;
+  margin-top: 4%;
   margin-bottom: 5.6%;
-  margin-left: 2%;
+  margin-left: 4%;
   padding: 6.2% 7% 4.9% 7%;
   text-align: center;
-  height: 338px;
-  width: 338px;
+  height: 325px;
+  width: 325px;
 }
 
 #add-plant-item a {

@@ -53,14 +53,16 @@ const MyPlantList = () => {
                     return <PlantItem plant={plant} key={i} handleDelete={handleDelete} handleUpdatePlant={handleUpdatePlant} />
                 })
             }
+            
+            <div id='add-plant-item'>
+                <a href='/add'>
+                <h2>+</h2>
+                <p>Add Plant</p>
+                </a>
             </div>
+        </div>
 
-                <div id='add-plant-item'>
-                    <a href='/add'>
-                    <h2>+</h2>
-                    <p>Add Plant</p>
-                    </a>
-                    </div>
+                
         </div>
     )
 }
