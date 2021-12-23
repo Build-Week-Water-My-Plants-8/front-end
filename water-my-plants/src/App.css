@@ -42,6 +42,7 @@ header a:hover{
   justify-content: center;
   height: 94vh;
   width: 100%;
+  margin-bottom: 4rem;
 }
 
 .home-button Button {
@@ -188,11 +189,12 @@ input {
 footer {
   border-top: 1px solid black;
   display: flex;
-  justify-content: space-around;
-  background-color: #64755F;
+  justify-content: space-evenly;
   height: 4rem;
+  background-color: #64755F;
   padding: 1% 4% 0 4%;
   position: fixed;
+  bottom: 0px;
   width: 100%;
 }
 
