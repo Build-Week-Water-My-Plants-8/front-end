@@ -23,6 +23,7 @@ const MyPlantList = () => {
             .then(resp => {
                 const deletedPlant = plantList.filter(plant => plant.plant_id !== id)
                 setPlantList(deletedPlant)
+                
             })
             .catch(err => {
                 console.error({err})
@@ -30,12 +31,14 @@ const MyPlantList = () => {
     }
 
     const handleUpdatePlant = (newPlant) => {
+        console.log(newPlant);
         axiosWithAuth()
         .put(`/plants/${newPlant.plant_id}`, newPlant)
             .then(resp => {
                 setPlantList(
                     plantList.filter(plant => plant.plant_id !== newPlant.plant_id).concat([resp.data])
                 )
+                console.log(plantList);
             })
             .catch(err => {
                 console.error({err})

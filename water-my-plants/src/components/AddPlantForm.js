@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Button, FormGroup} from 'reactstrap';
 import { useNavigate } from 'react-router-dom';
 import axiosWithAuth from '../utils/axiosWithAuth';
 
@@ -28,7 +28,6 @@ const AddPlantForm = () => {
         axiosWithAuth()
             .post('/plants/add', values)
                 .then(resp => {
-                    console.log(resp);
                     navigate('/plants')
                 })
                 .catch(err => {
