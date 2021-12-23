@@ -244,7 +244,25 @@ input {
 }
 
 /* about page styles */
+.about-container {
+  display: flex;
+  justify-content: space-evenly;
+  color: #354131;
+}
 
+.unit-container h2 {
+  text-align: center;
+}
+
+.member-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.github-icon {
+  color: #354131;
+}
 
 /* footer styles */
 footer {
