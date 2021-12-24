@@ -54,7 +54,7 @@ npm start
 
 # Meet the team!
 
-![Arias](/images/arias.png)
+![Arias](https://github.com/Build-Week-Water-My-Plants-8/front-end/blob/main/water-my-plants/src/Assets/team/arias.png)
 
 Arison Arias
 
@@ -64,7 +64,7 @@ Github: [https://github.com/Arison13](https://github.com/Arison13)
 
 Unit 4
 
-![Jared](/src/Assets/team/images/jared.png)
+![Jared](https://github.com/Build-Week-Water-My-Plants-8/front-end/blob/main/water-my-plants/src/Assets/team/jared.png)
 
 Jared Hall
 
@@ -74,7 +74,7 @@ Github: [https://github.com/Jaredhall18](https://github.com/Jaredhall18)
 
 Unit 4
 
-![Jayson](/images/jayson.png)
+![Jayson](https://github.com/Build-Week-Water-My-Plants-8/front-end/blob/main/water-my-plants/src/Assets/team/jayson.png)
 
 Jayson Byrd
 
@@ -84,7 +84,7 @@ Github: [https://github.com/ByrdJayson](https://github.com/ByrdJayson)
 
 Unit 3
 
-![Lia](/images/me.png)
+![Lia](https://github.com/Build-Week-Water-My-Plants-8/front-end/blob/main/water-my-plants/src/Assets/team/me.png)
 
 Lia Moua
 
@@ -94,7 +94,7 @@ Github: [https://github.com/moua0061](https://github.com/moua0061)
 
 Unit 3
 
-![Ryan](/images/ryan.png)
+![Ryan](https://github.com/Build-Week-Water-My-Plants-8/front-end/blob/main/water-my-plants/src/Assets/team/ryan.png)
 
 Ryan Howard
 
@@ -104,7 +104,7 @@ Github: [https://github.com/ryansnorek](https://github.com/ryansnorek)
 
 Unit 3
 
-![Kayla](/images/kayla.png)
+![Kayla](https://github.com/Build-Week-Water-My-Plants-8/front-end/blob/main/water-my-plants/src/Assets/team/kayla.png)
 
 Kayla Famurewa
 
@@ -114,7 +114,7 @@ Github: [https://github.com/kfam22](https://github.com/kfam22)
 
 Unit 2
 
-![Brandon](/images/brandon.png)
+![Brandon](https://github.com/Build-Week-Water-My-Plants-8/front-end/blob/main/water-my-plants/src/Assets/team/brandon.png)
 
 Brandon Booth
 
@@ -124,7 +124,7 @@ Github: [https://github.com/brandon-bee](https://github.com/brandon-bee)
 
 Unit 2
 
-![Gage](/images/gage.png)
+![Gage](https://github.com/Build-Week-Water-My-Plants-8/front-end/blob/main/water-my-plants/src/Assets/team/gage.png)
 
 Gage Milligan
 
