@@ -100,7 +100,7 @@ Ryan Howard
 
 Frontend React Engineer
 
-Github: [https://github.com/ryansnorek](https://github.com/ryansnorek)
+Github: [https://github.com/ryansnorek](https://github.com/ryanghoward)
 
 Unit 3
 
